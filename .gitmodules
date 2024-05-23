@@ -10,3 +10,6 @@
 [submodule "bat/themes/bat"]
 	path = bat/themes/bat
 	url = https://github.com/catppuccin/bat.git
+[submodule "delta/delta"]
+	path = delta/delta
+	url = https://github.com/catppuccin/delta.git
