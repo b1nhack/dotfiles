@@ -7,3 +7,6 @@
 [submodule "zsh/plugins/zsh-fsh"]
 	path = zsh/plugins/zsh-fsh
 	url = https://github.com/catppuccin/zsh-fsh.git
+[submodule "bat/themes/bat"]
+	path = bat/themes/bat
+	url = https://github.com/catppuccin/bat.git
