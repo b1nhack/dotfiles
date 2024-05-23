@@ -1,24 +1,18 @@
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/b1nhack/nvim.git
-	ignore = dirty
 [submodule "zsh/plugins/fsh"]
 	path = zsh/plugins/fsh
 	url = https://github.com/zdharma-continuum/fast-syntax-highlighting
-	ignore = dirty
 [submodule "zsh/plugins/zsh-fsh"]
 	path = zsh/plugins/zsh-fsh
 	url = https://github.com/catppuccin/zsh-fsh.git
-	ignore = dirty
 [submodule "bat/themes/bat"]
 	path = bat/themes/bat
 	url = https://github.com/catppuccin/bat.git
-	ignore = dirty
 [submodule "delta/delta"]
 	path = delta/delta
 	url = https://github.com/catppuccin/delta.git
-	ignore = dirty
 [submodule "gitui/gitui"]
 	path = gitui/gitui
 	url = https://github.com/catppuccin/gitui.git
-	ignore = dirty
