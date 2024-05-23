@@ -13,3 +13,6 @@
 [submodule "delta/delta"]
 	path = delta/delta
 	url = https://github.com/catppuccin/delta.git
+[submodule "gitui/gitui"]
+	path = gitui/gitui
+	url = https://github.com/catppuccin/gitui.git
