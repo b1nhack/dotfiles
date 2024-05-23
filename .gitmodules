@@ -4,3 +4,6 @@
 [submodule "zsh/plugins/fsh"]
 	path = zsh/plugins/fsh
 	url = https://github.com/zdharma-continuum/fast-syntax-highlighting
+[submodule "zsh/plugins/zsh-fsh"]
+	path = zsh/plugins/zsh-fsh
+	url = https://github.com/catppuccin/zsh-fsh.git
