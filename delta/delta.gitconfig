@@ -1,0 +1,7 @@
+[include]
+path = ./delta/catppuccin.gitconfig
+
+[delta]
+navigate = true
+features = catppuccin-macchiato
+hyperlinks = true

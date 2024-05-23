@@ -1,0 +1,44 @@
+--color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796
+--color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6
+--color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796
+
+--prompt=" "
+--pointer=" "
+--marker=" "
+--ellipsis=" "
+
+--tabstop=2
+--highlight-line
+
+--preview="bat --color=always --style=numbers --line-range=:500 {}"
+
+--bind=alt-b:
+
+--bind=ctrl-a:
+--bind=ctrl-n:beginning-of-line
+
+--bind=ctrl-l:unix-line-discard
+
+--bind=ctrl-d:
+
+--bind=ctrl-j:
+--bind=ctrl-e:down
+
+--bind=ctrl-i:end-of-line
+
+--bind=ctrl-f:
+
+--bind=alt-f:
+
+--bind=alt-d:
+
+--bind=ctrl-h:preview-page-up
+--bind=ctrl-b:preview-page-down
+
+--bind=ctrl-p:toggle-preview
+--bind=ctrl-k:
+--bind=ctrl-u:up
+
+--bind=ctrl-w:
+
+--bind=ctrl-a:toggle-all

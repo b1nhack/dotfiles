@@ -9,3 +9,5 @@ bat cache --build
 ln -s ./gitui/theme/macchiato.ron ~/.config/gitui/theme.ron
 
 kitty +kitten themes --reload-in=all Catppuccin-Macchiato
+
+ln -s ./.config/zsh/.zshenv ~/.zshenv
