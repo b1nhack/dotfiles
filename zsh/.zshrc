@@ -17,5 +17,18 @@ if [[ -r $ZDOTDIR/.aliasrc ]]; then
 fi
 
 source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
+source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+bindkey '^I' menu-select
+bindkey "$terminfo[kcbt]" menu-select
+
+bindkey -M menuselect '^I' menu-complete
+bindkey -M menuselect "$terminfo[kcbt]" reverse-menu-complete
+
+bindkey -M menuselect '^[[D' .backward-char '^[OD' .backward-char
+bindkey -M menuselect '^[[C' .forward-char '^[OC' .forward-char
+
+zstyle ':autocomplete:*' min-input 3
+zstyle ':autocomplete:*' delay 0.1 # seconds (float)
 
 eval "$(starship init zsh)"

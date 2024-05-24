@@ -16,3 +16,6 @@
 [submodule "gitui/gitui"]
 	path = gitui/gitui
 	url = https://github.com/catppuccin/gitui.git
+[submodule "zsh/plugins/zsh-autocomplete"]
+	path = zsh/plugins/zsh-autocomplete
+	url = https://github.com/marlonrichert/zsh-autocomplete.git
