@@ -1,0 +1,87 @@
+#!/bin/zsh
+
+# Completion
+bindkey '^E' menu-select
+bindkey "^U" menu-select
+
+# menuselect
+bindkey -rpM menuselect ""
+bindkey -M menuselect '^E' menu-complete
+bindkey -M menuselect "^U" reverse-menu-complete
+bindkey -M menuselect '^[[D' .backward-char '^[OD' .backward-char
+bindkey -M menuselect '^[[C' .forward-char '^[OC' .forward-char
+bindkey -M menuselect "^K" send-break
+
+# vicmd
+bindkey -rpM vicmd ""
+bindkey -M vicmd "^M" accept-line
+bindkey -M vicmd "u" up-line
+bindkey -M vicmd "e" down-line
+bindkey -M vicmd "n" vi-backward-char
+bindkey -M vicmd "N" vi-first-non-blank
+bindkey -M vicmd "^N" vi-insert-bol
+bindkey -M vicmd "i" vi-forward-char
+bindkey -M vicmd "I" vi-end-of-line
+bindkey -M vicmd "^I" vi-add-eol
+bindkey -M vicmd "^v" edit-command-line
+
+bindkey -M vicmd "b" vi-backward-word
+bindkey -M vicmd "B" vi-backward-blank-word
+bindkey -M vicmd "h" vi-forward-word-end
+bindkey -M vicmd "H" vi-forward-blank-word-end
+bindkey -M vicmd "a" vi-add-next
+bindkey -M vicmd "A" vi-add-eol
+bindkey -M vicmd "k" vi-insert
+bindkey -M vicmd "K" vi-insert-bol
+bindkey -M vicmd "o" vi-open-line-below
+bindkey -M vicmd "O" vi-open-line-above
+
+bindkey -M vicmd "d" vi-delete
+bindkey -M vicmd "D" vi-kill-eol
+bindkey -M vicmd "c" vi-change
+bindkey -M vicmd "C" vi-change-eol
+bindkey -M vicmd "x" vi-delete-char
+bindkey -M vicmd "X" vi-backward-delete-char
+bindkey -M vicmd "r" vi-replace-chars
+bindkey -M vicmd "R" vi-replace
+
+bindkey -M vicmd "p" vi-put-after
+bindkey -M vicmd "P" vi-put-before
+
+bindkey -M vicmd "v" visual-mode
+bindkey -M vicmd "V" visual-line-mode
+bindkey -M vicmd "l" undo
+bindkey -M vicmd "L" redo
+
+bindkey -M vicmd "." vi-repeat-change
+bindkey -M vicmd "0"-"9" digit-argument
+bindkey -M vicmd "J" vi-join
+
+# viins
+bindkey -M viins "^N" vi-insert-bol
+bindkey -M viins "^I" vi-add-eol # Ctrl+i in CSI u, configured in kitty.conf
+bindkey -M viins "^v" edit-command-line
+
+# viopp
+bindkey -rpM viopp ""
+bindkey -M viopp "^[" vi-cmd-mode
+bindkey -M viopp "u" up-line
+bindkey -M viopp "e" down-line
+bindkey -M viopp "aw" select-a-word
+bindkey -M viopp "aW" select-a-blank-word
+bindkey -M viopp "kw" select-in-word
+bindkey -M viopp "kW" select-in-blank-word
+
+# visual
+bindkey -rpM visual ""
+bindkey -M visual "^[" deactivate-region
+bindkey -M visual "u" up-line
+bindkey -M visual "e" down-line
+bindkey -M visual "aw" select-a-word
+bindkey -M visual "aW" select-a-blank-word
+bindkey -M visual "kw" select-in-word
+bindkey -M visual "kW" select-in-blank-word
+bindkey -M visual "x" vi-delete
+bindkey -M visual "p" put-replace-selection
+bindkey -M visual "d" vi-delete
+bindkey -M visual "c" vi-change
