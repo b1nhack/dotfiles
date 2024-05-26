@@ -5,3 +5,4 @@ kitty/current-theme.conf
 kitty/neighboring_window.py
 kitty/relative_resize.py
 zsh/.zsh_history
+nvim/
