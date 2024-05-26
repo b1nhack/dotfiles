@@ -19,14 +19,16 @@ if [[ -r $ZDOTDIR/.aliasrc ]]; then
 	. $ZDOTDIR/.aliasrc
 fi
 
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
 source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
+zstyle ':autocomplete:*' min-input 3
+zstyle ':autocomplete:*' delay 0.1 # seconds (float)
 
 if [[ -r $ZDOTDIR/.bindkeyrc ]]; then
 	. $ZDOTDIR/.bindkeyrc
 fi
-
-zstyle ':autocomplete:*' min-input 3
-zstyle ':autocomplete:*' delay 0.1 # seconds (float)
 
 eval "$(starship init zsh)"
