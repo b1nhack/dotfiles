@@ -1,6 +1,6 @@
 [submodule "nvim"]
 	path = nvim
-	url = https://github.com/b1nhack/nvim.git
+	url = https://codeberg.org/b1n/nvim.git
 [submodule "zsh/plugins/fsh"]
 	path = zsh/plugins/fsh
 	url = https://github.com/zdharma-continuum/fast-syntax-highlighting
