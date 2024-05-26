@@ -5,3 +5,4 @@ path = ./delta/catppuccin.gitconfig
 navigate = true
 features = catppuccin-macchiato
 hyperlinks = true
+side-by-side = true
