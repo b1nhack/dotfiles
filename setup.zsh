@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+if [[ ! -d "$HOME/.config/fsh" ]]; then
+	mkdir -p "~/.config/fsh"
+fi
 ln -s ../zsh/plugins/zsh-fsh/themes/catppuccin-macchiato.ini ~/.config/fsh/catppuccin-macchiato.ini
 fast-theme XDG:catppuccin-macchiato
 
