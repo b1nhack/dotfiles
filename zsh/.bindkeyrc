@@ -65,8 +65,8 @@ bindkey -M viins "^I" vi-add-eol # Ctrl+i in CSI u, configured in kitty.conf
 bindkey -M viins "^v" edit-command-line
 bindkey -M viins "U" history-substring-search-up
 bindkey -M viins "E" history-substring-search-down
-bindkey -M viins "^[^[[A" history-substring-search-up "^[^[OA" history-substring-search-up
-bindkey -M viins "^[^[[B" history-substring-search-down "^[^[OB" history-substring-search-down
+bindkey -M viins "^[[A" history-substring-search-up "^[OA" history-substring-search-up
+bindkey -M viins "^[[B" history-substring-search-down "^[OB" history-substring-search-down
 bindkey -M viins "^[[1;3A" undefined-key
 bindkey -M viins "^[[1;3B" undefined-key
 
