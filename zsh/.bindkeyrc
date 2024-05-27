@@ -1,15 +1,15 @@
 #!/bin/zsh
 
 # Completion
-bindkey '^E' menu-select
+bindkey "^E" menu-select
 bindkey "^U" menu-select
 
 # menuselect
 bindkey -rpM menuselect ""
-bindkey -M menuselect '^E' menu-complete
+bindkey -M menuselect "^E" menu-complete
 bindkey -M menuselect "^U" reverse-menu-complete
-bindkey -M menuselect '^[[D' .backward-char '^[OD' .backward-char
-bindkey -M menuselect '^[[C' .forward-char '^[OC' .forward-char
+bindkey -M menuselect "^[[D" .backward-char "^[OD" .backward-char
+bindkey -M menuselect "^[[C" .forward-char "^[OC" .forward-char
 bindkey -M menuselect "^K" send-break
 
 # vicmd
@@ -17,6 +17,8 @@ bindkey -rpM vicmd ""
 bindkey -M vicmd "^M" accept-line
 bindkey -M vicmd "u" up-line
 bindkey -M vicmd "e" down-line
+bindkey -M vicmd "U" history-substring-search-up
+bindkey -M vicmd "E" history-substring-search-down
 bindkey -M vicmd "n" vi-backward-char
 bindkey -M vicmd "N" vi-first-non-blank
 bindkey -M vicmd "^N" vi-insert-bol
@@ -61,6 +63,12 @@ bindkey -M vicmd "J" vi-join
 bindkey -M viins "^N" vi-insert-bol
 bindkey -M viins "^I" vi-add-eol # Ctrl+i in CSI u, configured in kitty.conf
 bindkey -M viins "^v" edit-command-line
+bindkey -M viins "U" history-substring-search-up
+bindkey -M viins "E" history-substring-search-down
+bindkey -M viins "^[^[[A" history-substring-search-up "^[^[OA" history-substring-search-up
+bindkey -M viins "^[^[[B" history-substring-search-down "^[^[OB" history-substring-search-down
+bindkey -M viins "^[[1;3A" undefined-key
+bindkey -M viins "^[[1;3B" undefined-key
 
 # viopp
 bindkey -rpM viopp ""
@@ -77,6 +85,8 @@ bindkey -rpM visual ""
 bindkey -M visual "^[" deactivate-region
 bindkey -M visual "u" up-line
 bindkey -M visual "e" down-line
+bindkey -M visual "U" history-substring-search-up
+bindkey -M visual "E" history-substring-search-down
 bindkey -M visual "aw" select-a-word
 bindkey -M visual "aW" select-a-blank-word
 bindkey -M visual "kw" select-in-word

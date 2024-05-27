@@ -23,6 +23,7 @@ FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
 source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source $ZDOTDIR/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 zstyle ':autocomplete:*' min-input 3
 zstyle ':autocomplete:*' delay 0.1 # seconds (float)
