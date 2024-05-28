@@ -20,6 +20,7 @@ if [[ -r $ZDOTDIR/.aliasrc ]]; then
 fi
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+FPATH="$ZDOTDIR/completions:${FPATH}"
 
 source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
 source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
