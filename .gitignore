@@ -2,7 +2,7 @@ fsh/catppuccin-macchiato.ini
 bat/themes/Catppuccin\ Macchiato.tmTheme
 gitui/theme.ron
 kitty/current-theme.conf
-kitty/neighboring_window.py
-kitty/relative_resize.py
+kitty/get_layout.py
+kitty/pass_keys.py
 zsh/.zsh_history
 nvim/
