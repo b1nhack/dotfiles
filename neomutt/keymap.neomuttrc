@@ -49,6 +49,7 @@ bind index "<Space>a" alias-dialog
 bind index "<Space>e" next-thread
 bind index "<Space>h" help
 bind index "<Space>k" mail-key
+bind index "<Space>l" show-log-messages
 bind index "<Space>p" show-limit
 bind index "<Space>r" read-subthread
 bind index "<Space>s" resend-message
@@ -65,6 +66,7 @@ bind index "Q" quit
 bind index "R" list-reply
 bind index "T" tag-pattern
 bind index "W" clear-flag
+bind index "X" purge-thread
 bind index "Y" edit-label
 bind index "Z" collapse-all
 bind index "\CD" delete-thread
@@ -92,6 +94,7 @@ bind index "s" save-message
 bind index "u" previous-entry
 bind index "v" view-attachments
 bind index "w" set-flag
+bind index "x" purge-message
 bind index "y" edit-type
 bind index "z" collapse-thread
 bind index "|" pipe-entry
@@ -129,6 +132,7 @@ bind pager "R" list-reply
 bind pager "T" toggle-quoted
 bind pager "U" top
 bind pager "W" clear-flag
+bind pager "X" purge-thread
 bind pager "Y" edit-label
 bind pager "\CB" next-page
 bind pager "\CD" delete-thread
@@ -157,6 +161,7 @@ bind pager "t" tag-message
 bind pager "u" half-up
 bind pager "v" view-attachments
 bind pager "w" set-flag
+bind pager "x" purge-message
 bind pager "y" edit-type
 bind pager "|" pipe-entry
 bind pager "|" pipe-message
