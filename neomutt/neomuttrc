@@ -1,0 +1,6 @@
+source "gpg -dq ~/.config/neomutt/pass.gpg |"
+
+source ~/.config/neomutt/core.neomuttrc
+source ~/.config/neomutt/keymap.neomuttrc
+source ~/.config/neomutt/catppuccin.neomuttrc
+source ~/.config/neomutt/aliases.neomuttrc

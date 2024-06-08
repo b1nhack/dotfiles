@@ -33,4 +33,17 @@ if [[ -r $ZDOTDIR/.bindkeyrc ]]; then
 	. $ZDOTDIR/.bindkeyrc
 fi
 
+stty discard undef
+stty lnext undef
+stty dsusp undef
+stty erase undef
+stty kill undef
+stty quit undef
+stty reprint undef
+stty start undef
+stty status undef
+stty stop undef
+stty susp undef
+stty werase undef
+
 eval "$(starship init zsh)"

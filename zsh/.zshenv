@@ -18,3 +18,5 @@ export FFSEND_ARCHIVE="1"
 export FFSEND_VERBOSE="1"
 
 export GPG_TTY=$(tty)
+
+export ESCDELAY=0
