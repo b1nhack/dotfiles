@@ -295,12 +295,11 @@ unbind editor
 
 bind editor "<Backspace>" backspace
 bind editor "<Delete>" backspace
-bind editor "<Space>h" help
 bind editor "<Tab>" complete
+bind editor "\CA" eol
 bind editor "\CB" backward-word
 bind editor "\CH" forward-word
-bind editor "\CI" eol
-bind editor "\CN" bol
+bind editor "\CK" bol
 bind editor "\CU" kill-line
 
 # Autocrypt Account Menu
