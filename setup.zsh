@@ -12,3 +12,6 @@ ln -sf ./bat/themes/Catppuccin\ Macchiato.tmTheme ~/.config/bat/themes/Catppucci
 ln -sf ./gitui/theme/macchiato.ron ~/.config/gitui/theme.ron
 
 ln -sf ./.config/zsh/.zshenv ~/.zshenv
+
+ln -sf ../.config/gnupg/gpg.conf ~/.gnupg/gpg.conf
+ln -sf ../.config/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
