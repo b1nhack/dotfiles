@@ -1,0 +1,26 @@
+import = [
+	"~/.config/alacritty/catppuccin-macchiato.toml"
+]
+
+[window]
+padding = { x = 3, y = 3 }
+dynamic_padding = true
+startup_mode = "Maximized"
+
+[font]
+normal = { family = "JetBrainsMono NF", style = "Regular" }
+bold = { family = "JetBrainsMono NF", style = "Bold" }
+italic = { family = "JetBrainsMono NF", style = "Italic" }
+bold_italic = { family = "JetBrainsMono NF", style = "Bold Italic" }
+size = 13.0
+offset = { x = 0, y = 2 }
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+vi_mode_style = { shape = "Block", blinking = "On" }
+
+[mouse]
+hide_when_typing = true
+
+[keyboard]
+bindings = [{ key = "R", mods = "Alt", chars = "\u000c" }]
