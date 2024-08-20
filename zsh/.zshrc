@@ -12,12 +12,10 @@ setopt NO_HIST_BEEP
 setopt NO_BEEP
 setopt NO_AUTO_REMOVE_SLASH
 
+export PATH="/opt/homebrew/bin:$PATH"
+
 autoload -Uz edit-command-line
 zle -N edit-command-line
-
-if [[ -r $ZDOTDIR/.aliasrc ]]; then
-	. $ZDOTDIR/.aliasrc
-fi
 
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 FPATH="$ZDOTDIR/completions:${FPATH}"
@@ -28,6 +26,10 @@ source $ZDOTDIR/plugins/zsh-history-substring-search/zsh-history-substring-searc
 
 zstyle ':autocomplete:*' min-input 2
 zstyle ':autocomplete:*' delay 0.1 # seconds (float)
+
+if [[ -r $ZDOTDIR/.aliasrc ]]; then
+	. $ZDOTDIR/.aliasrc
+fi
 
 if [[ -r $ZDOTDIR/.bindkeyrc ]]; then
 	. $ZDOTDIR/.bindkeyrc
