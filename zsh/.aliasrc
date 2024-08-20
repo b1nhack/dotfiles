@@ -8,7 +8,7 @@ alias -- -="cd -"
 alias l="eza -alh --icons --group-directories-first"
 alias ll="eza -lh --icons --group-directories-first"
 
-alias n="neofetch"
+alias n="fastfetch"
 alias hc="echo -n >| $HISTFILE; fc -p $HISTFILE; echo >&2 History file deleted."
 
 alias v="nvim"
