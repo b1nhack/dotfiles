@@ -3,6 +3,9 @@ export SAVEHIST=99
 export HISTSIZE=999
 export KEYTIMEOUT=1
 
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+
 export VISUAL="nvim"
 export EDITOR="nvim"
 

@@ -16,3 +16,8 @@ ln -sf ./.config/zsh/.zshenv ~/.zshenv
 ln -sf ../.config/gnupg/gpg.conf ~/.gnupg/gpg.conf
 ln -sf ../.config/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 ln -sf ../.config/gnupg/dirmngr.conf ~/.gnupg/dirmngr.conf
+
+if [[ ! -d "$HOME/.config/aerc/stylesets" ]]; then
+	mkdir -p "~/.config/aerc/stylesets"
+fi
+ln -sf ~/.config/aerc/aerc/dist/catppuccin-macchiato ~/.config/aerc/stylesets/catppuccin-macchiato

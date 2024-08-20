@@ -12,7 +12,7 @@ alias n="neofetch"
 alias hc="echo -n >| $HISTFILE; fc -p $HISTFILE; echo >&2 History file deleted."
 
 alias v="nvim"
-alias m="neomutt"
+alias m="aerc"
 alias brewclean="brew cleanup --prune=all"
 
 alias icat="kitten icat"
