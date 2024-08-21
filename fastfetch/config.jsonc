@@ -14,14 +14,12 @@
 
 		},
 		"editor",
+		"terminal",
 		{
 			"type": "display",
 			"format": "{1}x{2} @ {3}Hz {14}bit",
 			"key": "Display",
 		},
-		"de",
-		"wm",
-		"terminal",
 		"cpu",
 		{
 			"type": "gpu",
@@ -29,21 +27,37 @@
 		},
 		{
 			"type": "cpuusage",
+			"percent": {
+				"green": 60,
+				"yellow": 90,
+			},
 			"format": "{6}",
 		},
 		{
 			"type": "memory",
+			"percent": {
+				"green": 60,
+				"yellow": 90,
+			},
 			"format": "{2} {4}",
 		},
 		{
 			"type": "disk",
+			"percent": {
+				"green": 60,
+				"yellow": 90,
+			},
 			"format": "{2} {13}",
 			"key": "Disk",
 		},
-		"localip",
+		{
+			"type": "localip",
+			"showMac": true,
+			"key": "IP",
+		},
 		{
 			"type": "battery",
-			"format": "{10} {5}"
+			"format": "{4} {5}"
 		},
 		"break",
 		"colors",
