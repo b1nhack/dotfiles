@@ -13,6 +13,7 @@ export EDITOR="nvim"
 . "$HOME/.cargo/env"
 
 export LESSHISTFILE=-
+export MANPAGER="nvim +Man!"
 
 export FFSEND_HOST="https://send.ephemeral.land"
 export FFSEND_EXPIRY_TIME="1d"
@@ -20,7 +21,10 @@ export FFSEND_DOWNLOAD_LIMIT="1"
 export FFSEND_ARCHIVE="1"
 export FFSEND_VERBOSE="1"
 
+export HOMEBREW_BAT=1
+export HOMEBREW_CLEANUP_MAX_AGE_DAYS=3
+export HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS=3
+export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_NO_INSECURE_REDIRECT=1
 export HOMEBREW_BUNDLE_FILE="$HOME/.config/Brewfile"
 export HOMEBREW_BUNDLE_NO_LOCK=1
-
-export MANPAGER="nvim +Man!"
