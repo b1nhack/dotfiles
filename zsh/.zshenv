@@ -22,3 +22,5 @@ export FFSEND_VERBOSE="1"
 
 export HOMEBREW_BUNDLE_FILE="$HOME/.config/Brewfile"
 export HOMEBREW_BUNDLE_NO_LOCK=1
+
+export MANPAGER="nvim +Man!"
