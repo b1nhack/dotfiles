@@ -9,6 +9,9 @@
 [commit]
 	gpgsign = true
 
+[format]
+	signOff = yes
+
 [push]
 	autoSetupRemote = true
 	default = current
@@ -32,5 +35,16 @@
 	logs = log --pretty=oneline --graph
 	vcommit = commit -v
 	last = log -1 HEAD
+
 [pull]
 	rebase = true
+
+[sendemail]
+	smtpServer = smtp.migadu.com
+	smtpUser = b1n@b1n.io
+	smtpEncryption = ssl
+	smtpServerPort = 465
+	confirm = compose
+	annotate = yes
+	from = b1n@b1n.io
+	smtpDomain = b1n.io
