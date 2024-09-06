@@ -10,7 +10,7 @@
 		"packages",
 		{
 			"type": "shell",
-			"format": "{6} {4}"
+			"format": "{6} {4}",
 
 		},
 		"editor",
@@ -23,7 +23,7 @@
 		"cpu",
 		{
 			"type": "gpu",
-			"format": "{2} ({5}) @ {12}"
+			"format": "{2} ({5}) @ {12}",
 		},
 		{
 			"type": "cpuusage",
@@ -57,7 +57,8 @@
 		},
 		{
 			"type": "battery",
-			"format": "{4} {5}"
+			"format": "{4} {5}",
+			"key": "Battery",
 		},
 		"break",
 		"colors",
