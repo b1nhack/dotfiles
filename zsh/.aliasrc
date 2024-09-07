@@ -8,11 +8,11 @@ alias -- -="cd -"
 alias l="eza -alh --icons --group-directories-first"
 alias ll="eza -lh --icons --group-directories-first"
 
-alias n="fastfetch"
 alias hc="echo -n >| $HISTFILE; fc -p $HISTFILE; echo >&2 History file deleted."
-
-alias v="nvim"
-alias m="aerc"
 alias brewclean="brew cleanup --prune=all"
 
 alias icat="kitten icat"
+alias n="fastfetch"
+alias v="nvim"
+alias m="aerc"
+alias h="hexyl"
