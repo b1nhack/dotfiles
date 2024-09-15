@@ -9,6 +9,9 @@
 [commit]
 	gpgsign = true
 
+[tag]
+	forceSignAnnotated = true
+
 [format]
 	signOff = yes
 	signature = b1n
