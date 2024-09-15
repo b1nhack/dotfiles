@@ -2,7 +2,7 @@
 	path = ~/.config/delta/delta.gitconfig
 
 [user]
-	name = b1n
+	name = Xingquan Liu
 	email = b1n@b1n.io
 	signingkey = B0079B12E6C98EA6
 
@@ -14,7 +14,7 @@
 
 [format]
 	signOff = yes
-	signature = b1n
+	signature = Xingquan Liu
 
 [push]
 	autoSetupRemote = true
@@ -50,6 +50,6 @@
 	smtpServerPort = 465
 	confirm = compose
 	annotate = yes
-	from = b1n@b1n.io
+	from = Xingquan Liu <b1n@b1n.io>
 	smtpDomain = b1n.io
 	xmailer = false
