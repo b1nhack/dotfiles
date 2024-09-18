@@ -13,6 +13,7 @@ setopt NO_BEEP
 setopt NO_AUTO_REMOVE_SLASH
 
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 
 autoload -Uz edit-command-line
 zle -N edit-command-line
