@@ -12,6 +12,7 @@ alias hc="echo -n >| $HISTFILE; fc -p $HISTFILE; echo >&2 History file deleted."
 alias brewclean="brew cleanup --prune=all"
 
 alias icat="kitten icat"
+alias s="kitten ssh"
 alias n="fastfetch"
 alias v="nvim"
 alias m="aerc"
