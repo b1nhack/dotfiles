@@ -7,50 +7,69 @@ set smtp_url = $my_smtp_url
 set smtp_pass = $my_pass
 
 # sending
-set from        = "b1n <b1n@b1n.io>"
-set real_name   = "b1n"
+set from        = "b1n@b1n.io"
+set real_name   = "Xingquan Liu"
 
 # mailboxes
-set spoolfile   = "+INBOX"
+set spool_file  = "+INBOX"
 set record      = "+Sent"
 set trash       = "+Trash"
 set postponed   = "+Drafts"
 mailboxes +INBOX +Sent +Drafts +Junk +Trash +Archive
 
+set alias_file = "~/.config/neomutt/aliases.neomuttrc"
 set attach_save_dir = "~/.cache/neomutt/files/"
 set certificate_file = "~/.cache/neomutt/certificates"
-set history_file = "~/.cache/neomutt/history"
-set news_cache_dir = "~/.cache/neomutt/news/"
 set header_cache = "~/.cache/neomutt/"
+set history_file = "~/.cache/neomutt/history"
 set message_cache_dir = "~/.cache/neomutt/"
-set alias_file = "~/.config/neomutt/aliases.neomuttrc"
+set news_cache_dir = "~/.cache/neomutt/news/"
+set signature = "~/.config/neomutt/signature.sig"
 
-set assumed_charset = "utf-8"
-set attach_charset = "utf-8"
-set send_charset = "utf-8"
-
-set pgp_default_key = "0xE56B020D04518342"
-set pgp_sign_as = "0x362352C31CF5A75E"
 set crypt_auto_sign = yes
 set crypt_opportunistic_encrypt = yes
-set crypt_reply_sign_encrypted = yes
-set postpone_encrypt = yes
+set crypt_opportunistic_encrypt_strong_keys = yes
+set crypt_use_pka = yes
 set fcc_before_send = yes
+set pgp_default_key = "0xE56B020D04518342"
+set pgp_get_keys_command = "gpg --locate-keys %r"
+set pgp_ignore_subkeys = no
+set pgp_show_unusable = no
+set pgp_sign_as = "0x362352C31CF5A75E"
+set postpone_encrypt = yes
 
+set abort_backspace = no
+set abort_key = "<Esc>"
+set auto_edit = yes
 set beep = no
+set browser_sort_dirs_first = yes
 set delete = yes
-set editor = "nvim"
+set edit_headers = yes
+set editor = `echo \$EDITOR`
+set fast_reply = yes
+set hidden_host = yes
 set history_remove_dups = "yes"
-set imap_pipeline_depth = 99
+set honor_disposition = yes
+set imap_condstore = yes
+set imap_idle = yes
+set imap_qresync = yes
 set local_date_header = no
 set maildir_header_cache_verify = no
 set mark_old = no
-set pager_stop = yes
-set sidebar_visible = yes
-set sleep_time = 0
-set sidebar_format = "%B%<F? [%F]>%* %<N?%N/>%S"
-set text_flowed = yes
-set size_show_bytes = yes
 set mbox_type = Maildir
-set abort_backspace = no
-set abort_key = "<Esc>"
+set message_cache_clean = yes
+set pager_stop = yes
+set pipe_decode = yes
+set send_charset="us-ascii:utf-8"
+set shell = "/bin/zsh"
+set sidebar_folder_indent = yes
+set sidebar_format = "%B%<F? [%F]>%* %<N?%N/>%S"
+set sidebar_visible = yes
+set size_show_bytes = yes
+set size_show_bytes = yes
+set sleep_time = 0
+set strict_threads = yes
+set ts_enabled = yes
+set use_threads = yes
+set wait_key = no
+unset use_domain

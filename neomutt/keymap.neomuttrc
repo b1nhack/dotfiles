@@ -1,50 +1,55 @@
 # vim: filetype=neomuttrc
 
-macro generic,index,pager "S" <sync-mailbox><imap-fetch-mail><refresh> "refresh mails"
+unmacro * "<Esc>b"
+unmacro * "<F1>"
+unmacro * "<F2>"
 unmacro * "\CB"
 
+macro generic,index "E" <next-entry><next-entry><next-entry><next-entry><next-entry><next-entry><next-entry><next-entry><next-entry>
+macro generic,index "U" <previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry>
+macro generic,index "S" <sync-mailbox><imap-fetch-mail><refresh> "refresh mails"
+
 # Generic Menu
+unbind generic "*"
+unbind generic "<"
 unbind generic "<End>"
 unbind generic "<Esc>/"
 unbind generic "<Home>"
+unbind generic "<KeypadEnter>"
 unbind generic "<Pagedown>"
 unbind generic "<Pageup>"
+unbind generic "="
+unbind generic ">"
 unbind generic "H"
 unbind generic "L"
-unbind generic "M"
-unbind generic "V"
 unbind generic "Z"
+unbind generic "["
 unbind generic "\CL"
+unbind generic "]"
 unbind generic "j"
 unbind generic "k"
 unbind generic "n"
 unbind generic "z"
 
-bind generic "<Enter>" select-entry
-bind generic "<Return>" select-entry
 bind generic "<Space>h" help
 bind generic "<Space>l" show-log-messages
 bind generic "?" search-reverse
-bind generic "E" bottom-page
 bind generic "M" search-opposite
-bind generic "U" top-page
-bind generic "\CB" next-page
-bind generic "\CH" previous-page
+bind generic "\CB" previous-page
+bind generic "\CH" next-page
 bind generic "e" next-entry
 bind generic "m" search-next
-bind generic "q" exit
 bind generic "u" previous-entry
 
 # Index Menu
 unbind index
 unbind index "?"
+unbind index "q"
 
 bind index "#" break-thread
 bind index "$" sync-mailbox
 bind index "%" toggle-write
 bind index "&" link-threads
-bind index "<Enter>" display-message
-bind index "<Return>" display-message
 bind index "<Space>a" alias-dialog
 bind index "<Space>e" next-thread
 bind index "<Space>h" help
@@ -55,10 +60,9 @@ bind index "<Space>r" read-subthread
 bind index "<Space>s" resend-message
 bind index "<Space>u" previous-thread
 bind index "@" display-address
-bind index "C" copy-message
 bind index "D" delete-pattern
 bind index "F" flag-message
-bind index "K" recall-message
+bind index "H" display-toggle-weed
 bind index "L" undelete-pattern
 bind index "N" toggle-new
 bind index "P" parent-message
@@ -67,7 +71,7 @@ bind index "R" list-reply
 bind index "T" tag-pattern
 bind index "W" clear-flag
 bind index "X" purge-thread
-bind index "Y" edit-label
+bind index "Y" edit-type
 bind index "Z" collapse-all
 bind index "\CD" delete-thread
 bind index "\CE" sidebar-next
@@ -77,27 +81,25 @@ bind index "\CO" sidebar-open
 bind index "\CR" read-thread
 bind index "\CT" untag-pattern
 bind index "\CU" sidebar-prev
-bind index "\CV" edit-or-view-raw-message
+bind index "\CV" view-attachments
 bind index "a" create-alias
 bind index "b" bounce-message
+bind index "c" copy-message
 bind index "d" delete-message
 bind index "e" next-entry
 bind index "f" forward-message
 bind index "g" group-reply
-bind index "h" display-toggle-weed
 bind index "k" mail
 bind index "l" undelete-message
 bind index "p" limit
-bind index "q" exit
 bind index "r" reply
 bind index "s" save-message
 bind index "u" previous-entry
-bind index "v" view-attachments
+bind index "v" edit-or-view-raw-message
 bind index "w" set-flag
 bind index "x" purge-message
-bind index "y" edit-type
+bind index "y" edit-label
 bind index "z" collapse-thread
-bind index "|" pipe-entry
 bind index "|" pipe-message
 
 # Pager Menu
@@ -110,60 +112,53 @@ bind pager "$" sync-mailbox
 bind pager "%" toggle-write
 bind pager "&" link-threads
 bind pager "/" search
-bind pager ":" enter-command
-bind pager "<Space>e" next-subthread
+bind pager "<Space>e" next-thread
 bind pager "<Space>h" help
 bind pager "<Space>k" mail-key
 bind pager "<Space>l" show-log-messages
 bind pager "<Space>r" read-subthread
 bind pager "<Space>s" resend-message
-bind pager "<Space>u" previous-subthread
+bind pager "<Space>u" previous-thread
 bind pager "?" search-reverse
 bind pager "@" display-address
-bind pager "C" copy-message
-bind pager "E" bottom
 bind pager "F" flag-message
-bind pager "K" recall-message
+bind pager "H" display-toggle-weed
 bind pager "M" search-opposite
 bind pager "N" mark-as-new
 bind pager "P" parent-message
-bind pager "Q" quit
 bind pager "R" list-reply
 bind pager "T" toggle-quoted
-bind pager "U" top
 bind pager "W" clear-flag
 bind pager "X" purge-thread
-bind pager "Y" edit-label
-bind pager "\CB" next-page
+bind pager "Y" edit-type
+bind pager "\CB" previous-page
 bind pager "\CD" delete-thread
 bind pager "\CE" sidebar-next
-bind pager "\CH" previous-page
+bind pager "\CH" next-page
 bind pager "\CK" extract-keys
 bind pager "\CL" undelete-thread
 bind pager "\CO" sidebar-open
 bind pager "\CR" read-thread
 bind pager "\CU" sidebar-prev
-bind pager "\CV" edit-or-view-raw-message
+bind pager "\CV" view-attachments
 bind pager "a" create-alias
 bind pager "b" bounce-message
+bind pager "c" copy-message
 bind pager "d" delete-message
 bind pager "e" half-down
 bind pager "f" forward-message
 bind pager "g" group-reply
-bind pager "h" display-toggle-weed
 bind pager "k" mail
 bind pager "l" undelete-message
 bind pager "m" search-next
-bind pager "q" exit
 bind pager "r" reply
 bind pager "s" save-message
 bind pager "t" tag-message
 bind pager "u" half-up
-bind pager "v" view-attachments
+bind pager "v" edit-or-view-raw-message
 bind pager "w" set-flag
 bind pager "x" purge-message
-bind pager "y" edit-type
-bind pager "|" pipe-entry
+bind pager "y" edit-label
 bind pager "|" pipe-message
 
 # Alias Menu
@@ -174,7 +169,6 @@ bind alias "d" delete-entry
 bind alias "k" mail
 bind alias "l" undelete-entry
 bind alias "p" limit
-bind alias "q" exit
 bind alias "t" tag-entry
 
 # Query Menu
@@ -182,68 +176,63 @@ unbind query
 unbind query "?"
 
 bind query "A" query-append
+bind query "O" sort-reverse
 bind query "Q" query
 bind query "a" create-alias
 bind query "k" mail
+bind query "o" sort
 bind query "p" limit
-bind query "q" exit
 
 # Attachment Menu
 unbind attach
 unbind attach "?"
 
+bind attach "<Return>" view-attach
+bind attach "H" display-toggle-weed
 bind attach "R" list-reply
-bind attach "V" view-text
 bind attach "b" bounce-message
 bind attach "d" delete-entry
 bind attach "f" forward-message
 bind attach "g" group-reply
-bind attach "h" display-toggle-weed
 bind attach "l" undelete-entry
-bind attach "q" exit
 bind attach "r" reply
 bind attach "s" save-entry
-bind attach "v" view-attach
+bind attach "v" view-text
 bind attach "z" collapse-parts
-bind attach "|" pipe-entry
 bind attach "|" pipe-message
 
 # Compose Menu
 unbind compose
 unbind compose "?"
 
-bind compose "<Space>d" toggle-unlink
+bind compose "+" move-down
+bind compose "-" move-up
+bind compose "<Space>b" edit-bcc
+bind compose "<Space>c" edit-cc
+bind compose "<Space>d" edit-description
 bind compose "<Space>e" edit-file
 bind compose "<Space>f" edit-from
 bind compose "<Space>i" edit-content-id
 bind compose "<Space>k" attach-key
+bind compose "<Space>r" edit-reply-to
+bind compose "<Space>s" edit-subject
+bind compose "<Space>t" edit-to
 bind compose "A" attach-message
-bind compose "C" copy-file
 bind compose "D" detach-file
 bind compose "E" edit-headers
+bind compose "H" display-toggle-weed
 bind compose "P" postpone-message
-bind compose "R" rename-file
-bind compose "T" tag-entry
-bind compose "\CD" toggle-disposition
-bind compose "\CE" move-down
-bind compose "\CR" rename-attachment
-bind compose "\CT" edit-type
-bind compose "\CU" move-up
-bind compose "\CV" edit-message
+bind compose "R" rename-attachment
+bind compose "T" toggle-disposition
+bind compose "Y" send-message
 bind compose "a" attach-file
-bind compose "b" edit-bcc
-bind compose "c" edit-cc
-bind compose "d" edit-description
+bind compose "c" copy-file
+bind compose "d" toggle-unlink
 bind compose "f" edit-fcc
-bind compose "h" display-toggle-weed
 bind compose "p" pgp-menu
-bind compose "q" exit
-bind compose "r" edit-reply-to
-bind compose "s" edit-subject
-bind compose "t" edit-to
+bind compose "t" tag-entry
 bind compose "v" view-attach
-bind compose "y" send-message
-bind compose "|" pipe-entry
+bind compose "y" edit-type
 bind compose "|" pipe-message
 
 # Postpone Menu
@@ -252,7 +241,6 @@ unbind postpone "?"
 
 bind postpone "d" delete-entry
 bind postpone "l" undelete-entry
-bind postpone "q" exit
 
 # Browser Menu
 unbind browser
@@ -262,14 +250,15 @@ bind browser "-" goto-parent
 bind browser "<Return>" goto-folder
 bind browser "@" display-filename
 bind browser "C" create-mailbox
-bind browser "S" toggle-subscribed
-bind browser "T" toggle-mailboxes
+bind browser "O" sort-reverse
+bind browser "T" toggle-subscribed
 bind browser "d" delete-mailbox
 bind browser "l" unsubscribe
+bind browser "o" sort
 bind browser "p" enter-mask
-bind browser "q" exit
 bind browser "r" rename-mailbox
 bind browser "s" subscribe
+bind browser "t" toggle-mailboxes
 bind browser "v" view-file
 
 # Pgp Menu
@@ -278,23 +267,9 @@ unbind pgp "?"
 # Smime Menu
 unbind smime "?"
 
-# Mixmaster Menu
-# unbind mix
-#
-# bind mix "<Return>" accept
-# bind mix "a" append
-# bind mix "i" chain-next
-# bind mix "n" chain-prev
-# bind mix "d" delete
-# bind mix "q" exit
-# bind mix "k" insert
-# bind mix "t" select-entry
-
 # Editor Menu
 unbind editor
 
-bind editor "<Backspace>" backspace
-bind editor "<Delete>" backspace
 bind editor "<Tab>" complete
 bind editor "\CA" eol
 bind editor "\CB" backward-word

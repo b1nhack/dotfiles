@@ -22,6 +22,7 @@ export FFSEND_ARCHIVE="1"
 export FFSEND_VERBOSE="1"
 
 export GPG_TTY=$(tty)
+export ESCDELAY=0
 
 export HOMEBREW_BAT=1
 export HOMEBREW_CLEANUP_MAX_AGE_DAYS=3
