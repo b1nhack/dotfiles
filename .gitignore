@@ -5,4 +5,5 @@ kitty/current-theme.conf
 kitty/get_layout.py
 kitty/pass_keys.py
 zsh/.zsh_history
+zsh/.zcompdump*
 nvim/
