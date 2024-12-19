@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+bindkey -v
+
 # Completion
 bindkey "^E" menu-select
 bindkey "^U" menu-select

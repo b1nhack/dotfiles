@@ -1,19 +1,9 @@
 export ZDOTDIR="$HOME/.config/zsh"
-export SAVEHIST=99
-export HISTSIZE=999
 export KEYTIMEOUT=1
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
-
-export VISUAL="nvim"
-export EDITOR="nvim"
-
-. "$HOME/.cargo/env"
-
-export LESSHISTFILE=-
-export MANPAGER="nvim +Man!"
 
 export FFSEND_HOST="https://send.ephemeral.land"
 export FFSEND_EXPIRY_TIME="1d"
@@ -29,5 +19,3 @@ export HOMEBREW_CLEANUP_MAX_AGE_DAYS=3
 export HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS=3
 export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_NO_INSECURE_REDIRECT=1
-export HOMEBREW_BUNDLE_FILE="$HOME/.config/Brewfile"
-export HOMEBREW_BUNDLE_NO_LOCK=1

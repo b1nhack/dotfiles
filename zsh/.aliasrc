@@ -1,19 +1,9 @@
 #!/bin/zsh
 
-alias ..="cd .."
-alias ...="cd ../.."
-alias ~="cd ~"
-alias -- -="cd -"
-
-alias l="eza -alh --icons --group-directories-first"
-alias ll="eza -lh --icons --group-directories-first"
-
-alias hc="echo -n >| $HISTFILE; fc -p $HISTFILE; echo >&2 History file deleted."
 alias brewclean="brew cleanup --prune=all"
-
 alias icat="kitten icat"
 alias s="kitten ssh"
 alias n="fastfetch"
-alias v="nvim"
 alias m="neomutt"
 alias h="hexyl"
+alias rebuild-darwin="darwin-rebuild switch --flake ~/.config/nix-darwin"

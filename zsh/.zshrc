@@ -12,29 +12,19 @@ setopt NO_HIST_BEEP
 setopt NO_BEEP
 setopt NO_AUTO_REMOVE_SLASH
 
+export SAVEHIST=999
+export HISTSIZE=999
+unset HISTFILE
+
+source "$HOME/.cargo/env"
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 autoload -Uz edit-command-line
 zle -N edit-command-line
 
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-FPATH="$ZDOTDIR/completions:${FPATH}"
-
-source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
-source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source $ZDOTDIR/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-
 zstyle ':autocomplete:*' min-input 2
 zstyle ':autocomplete:*' delay 0.1 # seconds (float)
-
-if [[ -r $ZDOTDIR/.aliasrc ]]; then
-	. $ZDOTDIR/.aliasrc
-fi
-
-if [[ -r $ZDOTDIR/.bindkeyrc ]]; then
-	. $ZDOTDIR/.bindkeyrc
-fi
 
 stty discard undef
 stty lnext undef
@@ -48,5 +38,12 @@ stty status undef
 stty stop undef
 stty susp undef
 stty werase undef
+
+source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
+source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source $ZDOTDIR/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+source $ZDOTDIR/.aliasrc
+source $ZDOTDIR/.bindkeyrc
 
 eval "$(starship init zsh)"
