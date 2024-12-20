@@ -90,7 +90,7 @@
           power.sleep.harddisk = 60;
           programs.bash.completion.enable = true;
           programs.direnv.enable = true;
-          programs.zsh.enableGlobalCompInit = false;
+          programs.zsh.enableCompletion = false;
           programs.zsh.promptInit = "";
           security.pam.enableSudoTouchIdAuth = true;
           system.defaults.ActivityMonitor.IconType = 0;
