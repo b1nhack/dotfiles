@@ -93,7 +93,6 @@
           programs.zsh.enableGlobalCompInit = false;
           programs.zsh.promptInit = "";
           security.pam.enableSudoTouchIdAuth = true;
-          system.defaults.".GlobalPreferences"."com.apple.mouse.scaling" = -1.0;
           system.defaults.ActivityMonitor.IconType = 0;
           system.defaults.ActivityMonitor.OpenMainWindow = true;
           system.defaults.ActivityMonitor.ShowCategory = 101;
