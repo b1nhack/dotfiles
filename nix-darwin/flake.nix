@@ -176,7 +176,7 @@
           system.defaults.dock.magnification = false;
           system.defaults.dock.mineffect = "genie";
           system.defaults.dock.minimize-to-application = true;
-          system.defaults.dock.mouse-over-hilite-stack = true;
+          system.defaults.dock.mouse-over-hilite-stack = false;
           system.defaults.dock.mru-spaces = false;
           system.defaults.dock.orientation = "bottom";
           system.defaults.dock.persistent-apps = [
