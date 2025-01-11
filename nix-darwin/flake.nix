@@ -83,7 +83,6 @@
           networking.wakeOnLan.enable = true;
           nix.settings.sandbox = true;
           power.restartAfterFreeze = false;
-          power.restartAfterPowerFailure = false;
           power.sleep.allowSleepByPowerButton = true;
           power.sleep.computer = 10;
           power.sleep.display = 10;
@@ -241,6 +240,7 @@
           system.defaults.screencapture.disable-shadow = true;
           system.defaults.screencapture.include-date = true;
           system.defaults.screencapture.show-thumbnail = true;
+          system.defaults.screencapture.target = "file";
           system.defaults.screensaver.askForPassword = true;
           system.defaults.screensaver.askForPasswordDelay = 0;
           system.defaults.spaces.spans-displays = false;
