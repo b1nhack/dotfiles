@@ -28,6 +28,8 @@
             ripgrep
             sd
             tealdeer
+            wget
+            xh
           ];
 
           # Necessary for using flakes on this system.
@@ -271,6 +273,7 @@
             delta
             entr
             fastfetch
+            git
             gnumake
             gnupg
             hexyl
@@ -282,7 +285,6 @@
             starship
             tokei
             universal-ctags
-            xh
           ];
         };
     in
