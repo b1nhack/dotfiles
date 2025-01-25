@@ -147,6 +147,9 @@
           system.defaults.WindowManager.AutoHide = false;
           system.defaults.WindowManager.EnableStandardClickToShowDesktop = false;
           system.defaults.WindowManager.EnableTiledWindowMargins = true;
+          system.defaults.WindowManager.EnableTilingByEdgeDrag = true;
+          system.defaults.WindowManager.EnableTilingOptionAccelerator = true;
+          system.defaults.WindowManager.EnableTopTilingByEdgeDrag = true;
           system.defaults.WindowManager.GloballyEnabled = true;
           system.defaults.WindowManager.HideDesktop = false;
           system.defaults.WindowManager.StageManagerHideWidgets = false;
