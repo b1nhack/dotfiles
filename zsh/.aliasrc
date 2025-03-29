@@ -1,9 +1,14 @@
 #!/bin/zsh
 
 alias brewclean="brew cleanup --prune=all"
-alias icat="kitten icat"
-alias s="kitten ssh"
-alias n="fastfetch"
-alias m="neomutt"
 alias h="hexyl"
+alias icat="kitten icat"
+alias m="neomutt"
+alias n="fastfetch"
 alias rebuild-darwin="darwin-rebuild switch --flake ~/.config/nix-darwin"
+alias s="kitten ssh"
+
+alias fdown="ffsend download"
+alias fh="ffsend history"
+alias frm="ffsend delete"
+alias fup="ffsend upload -c -P"
