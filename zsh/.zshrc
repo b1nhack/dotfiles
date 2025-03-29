@@ -16,7 +16,6 @@ export SAVEHIST=999
 export HISTSIZE=999
 unset HISTFILE
 
-source "$HOME/.cargo/env"
 export PATH="/opt/homebrew/bin:$PATH"
 export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
