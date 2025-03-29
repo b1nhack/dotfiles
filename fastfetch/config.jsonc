@@ -7,7 +7,6 @@
 		"host",
 		"kernel",
 		"uptime",
-		"packages",
 		{
 			"type": "shell",
 			"format": "{6} {4}",
@@ -24,14 +23,6 @@
 		{
 			"type": "gpu",
 			"format": "{2} ({5}) @ {12}",
-		},
-		{
-			"type": "cpuusage",
-			"percent": {
-				"green": 60,
-				"yellow": 90,
-			},
-			"format": "{6}",
 		},
 		{
 			"type": "memory",
