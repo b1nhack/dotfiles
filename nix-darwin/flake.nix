@@ -93,7 +93,7 @@
           programs.direnv.enable = true;
           programs.zsh.enableCompletion = false;
           programs.zsh.promptInit = "";
-          security.pam.enableSudoTouchIdAuth = true;
+          security.pam.services.sudo_local.touchIdAuth = true;
           system.defaults.ActivityMonitor.IconType = 0;
           system.defaults.ActivityMonitor.OpenMainWindow = true;
           system.defaults.ActivityMonitor.ShowCategory = 101;
