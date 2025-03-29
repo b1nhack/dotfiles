@@ -5,7 +5,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
-export FFSEND_HOST="https://send.ephemeral.land"
+export FFSEND_HOST="https://send.vis.ee"
 export FFSEND_EXPIRY_TIME="1d"
 export FFSEND_DOWNLOAD_LIMIT="1"
 export FFSEND_ARCHIVE="1"
