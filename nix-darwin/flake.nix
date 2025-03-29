@@ -276,6 +276,7 @@
             delta
             entr
             fastfetch
+            ffsend
             git
             gnumake
             gnupg
