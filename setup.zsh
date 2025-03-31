@@ -21,3 +21,5 @@ if [[ ! -d "$HOME/.config/aerc/stylesets" ]]; then
 	mkdir -p "~/.config/aerc/stylesets"
 fi
 ln -sf ~/.config/aerc/aerc/dist/catppuccin-macchiato ~/.config/aerc/stylesets/catppuccin-macchiato
+
+ln -sf ~/.config/eza/eza-themes/themes/catppuccin.yml ~/.config/eza/theme.yml

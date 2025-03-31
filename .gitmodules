@@ -22,3 +22,6 @@
 [submodule "aerc/aerc"]
 	path = aerc/aerc
 	url = https://github.com/catppuccin/aerc.git
+[submodule "eza/eza-themes"]
+	path = eza/eza-themes
+	url = https://github.com/eza-community/eza-themes

@@ -6,4 +6,5 @@ kitty/get_layout.py
 kitty/pass_keys.py
 zsh/.zsh_history
 zsh/.zcompdump*
+eza/theme.yml
 nvim/
