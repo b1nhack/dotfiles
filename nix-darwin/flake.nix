@@ -28,7 +28,6 @@
             ripgrep
             sd
             tealdeer
-            wget
             xh
           ];
 
@@ -271,7 +270,6 @@
           users.users.b1n.packages = with pkgs; [
             cscope
             delta
-            entr
             fastfetch
             ffsend
             git
