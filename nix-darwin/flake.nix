@@ -68,7 +68,6 @@
           homebrew.enable = true;
           homebrew.casks = [
             "betterzip"
-            "boop"
             "font-jetbrains-mono-nerd-font"
             "iina"
             "keepassxc"
@@ -76,7 +75,6 @@
             "motrix"
             "parallels"
             "surge"
-            "utm"
           ];
           homebrew.global.autoUpdate = false;
           homebrew.onActivation.cleanup = "zap";
@@ -271,7 +269,6 @@
           system.startup.chime = false;
           time.timeZone = "Asia/Shanghai";
           users.users.b1n.packages = with pkgs; [
-            cargo-nextest
             cscope
             delta
             entr
@@ -284,7 +281,6 @@
             neomutt
             nixd
             nixfmt-rfc-style
-            onefetch
             rustup
             starship
             tokei
