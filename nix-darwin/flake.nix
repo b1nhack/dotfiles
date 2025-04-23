@@ -28,6 +28,7 @@
             ripgrep
             sd
             tealdeer
+            wget
             xh
           ];
 
