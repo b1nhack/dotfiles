@@ -1,12 +1,19 @@
 #!/bin/zsh
 
+alias -- -="cd -"
+alias ...="cd ../.."
+alias ..="cd .."
+alias ~="cd ~"
+
 alias brewclean="brew cleanup --prune=all"
 alias h="hexyl"
 alias icat="kitten icat"
+alias l="eza -alh --icons --group-directories-first"
+alias ll="eza -lh --icons --group-directories-first"
 alias m="neomutt"
 alias n="fastfetch"
-alias rebuild-darwin="darwin-rebuild switch --flake ~/.config/nix-darwin"
 alias s="kitten ssh"
+alias v="nvim"
 
 alias fdown="ffsend download"
 alias fh="ffsend history"

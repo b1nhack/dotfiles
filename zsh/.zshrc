@@ -16,7 +16,7 @@ export SAVEHIST=999
 export HISTSIZE=999
 unset HISTFILE
 
-export PATH="/opt/homebrew/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 autoload -Uz edit-command-line
