@@ -10,18 +10,12 @@
 [submodule "delta/delta"]
 	path = delta/delta
 	url = https://github.com/catppuccin/delta.git
-[submodule "gitui/gitui"]
-	path = gitui/gitui
-	url = https://github.com/catppuccin/gitui.git
 [submodule "zsh/plugins/zsh-autocomplete"]
 	path = zsh/plugins/zsh-autocomplete
 	url = https://github.com/marlonrichert/zsh-autocomplete.git
 [submodule "zsh/plugins/zsh-history-substring-search"]
 	path = zsh/plugins/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
-[submodule "aerc/aerc"]
-	path = aerc/aerc
-	url = https://github.com/catppuccin/aerc.git
 [submodule "eza/eza-themes"]
 	path = eza/eza-themes
 	url = https://github.com/eza-community/eza-themes
