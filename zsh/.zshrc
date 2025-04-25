@@ -12,13 +12,6 @@ setopt NO_HIST_BEEP
 setopt NO_BEEP
 setopt NO_AUTO_REMOVE_SLASH
 
-export SAVEHIST=999
-export HISTSIZE=999
-unset HISTFILE
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-export FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
 autoload -Uz edit-command-line
 zle -N edit-command-line
 
@@ -45,4 +38,5 @@ source $ZDOTDIR/plugins/zsh-history-substring-search/zsh-history-substring-searc
 source $ZDOTDIR/.aliasrc
 source $ZDOTDIR/.bindkeyrc
 
+unset HISTFILE
 eval "$(starship init zsh)"
