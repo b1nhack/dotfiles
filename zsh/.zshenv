@@ -1,6 +1,8 @@
 export ZDOTDIR="$HOME/.config/zsh"
-export FPATH="$HOME/.nix-profile/share/zsh/site-functions:${FPATH}"
 export KEYTIMEOUT=1
+
+export FPATH="/nix/var/nix/profiles/default/share/zsh/site-functions:${FPATH}"
+export FPATH="$HOME/.nix-profile/share/zsh/site-functions:${FPATH}"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
