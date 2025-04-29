@@ -4,9 +4,11 @@ export KEYTIMEOUT=1
 export FPATH="/nix/var/nix/profiles/default/share/zsh/site-functions:${FPATH}"
 export FPATH="$HOME/.nix-profile/share/zsh/site-functions:${FPATH}"
 
+# https://en.wikipedia.org/wiki/Freedesktop.org#Base_Directory_Specification
 export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
 
 export EZA_CONFIG_DIR="$HOME/.config/eza"
 
