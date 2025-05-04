@@ -43,6 +43,9 @@
 [pull]
 	rebase = true
 
+[init]
+	defaultBranch = main
+
 [sendemail]
 	smtpServer = smtp.migadu.com
 	smtpUser = b1n@b1n.io
