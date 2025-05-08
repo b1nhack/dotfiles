@@ -1,8 +1,9 @@
 export ZDOTDIR="$HOME/.config/zsh"
 export KEYTIMEOUT=1
 
-export FPATH="$HOME/.config/zsh/plugins/nix-zsh-completions:$FPATH"
 export FPATH="/nix/var/nix/profiles/default/share/zsh/site-functions:$FPATH"
+export FPATH="$HOME/.config/zsh/plugins/nix-zsh-completions:$FPATH"
+export FPATH="$HOME/.nix-profile/share/zsh/site-functions:$FPATH"
 
 # https://en.wikipedia.org/wiki/Freedesktop.org#Base_Directory_Specification
 export XDG_CONFIG_HOME="$HOME/.config"
