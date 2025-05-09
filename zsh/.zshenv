@@ -18,7 +18,7 @@ export LESSHISTFILE="-"
 export MANPAGER="nvim +Man!"
 export VISUAL="nvim"
 
-export FFSEND_HOST="https://send.vis.ee"
+export FFSEND_HOST="https://send.dogy.cloud"
 export FFSEND_EXPIRY_TIME="1d"
 export FFSEND_DOWNLOAD_LIMIT="1"
 export FFSEND_ARCHIVE="1"
