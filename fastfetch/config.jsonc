@@ -27,18 +27,19 @@
 		{
 			"type": "memory",
 			"percent": {
-				"green": 60,
+				"green": 75,
 				"yellow": 90,
 			},
-			"format": "{2} {4}",
+			"format": "{2} {3}",
 		},
 		{
 			"type": "disk",
+			"showExternal": false,
 			"percent": {
-				"green": 60,
+				"green": 75,
 				"yellow": 90,
 			},
-			"format": "{2} {13}",
+			"format": "{2} {3}",
 			"key": "Disk",
 		},
 		{
