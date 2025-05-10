@@ -16,3 +16,5 @@ ln -sf ~/.config/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
 ln -sf ~/.config/gnupg/dirmngr.conf ~/.gnupg/dirmngr.conf
 
 ln -sf ~/.config/eza/eza-themes/themes/catppuccin.yml ~/.config/eza/theme.yml
+
+ln -sf ~/.config/pwndbg/.gdbinit ~/.gdbinit
