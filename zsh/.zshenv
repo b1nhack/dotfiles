@@ -1,4 +1,5 @@
 export ZDOTDIR="$HOME/.config/zsh"
+# for fast ESC response in zsh
 export KEYTIMEOUT=1
 
 export FPATH="/nix/var/nix/profiles/default/share/zsh/site-functions:$FPATH"
