@@ -14,6 +14,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export EZA_CONFIG_DIR="$HOME/.config/eza"
 
+export RUSTUP_HOME="$HOME/.local/share/rustup"
+
 export EDITOR="nvim"
 export LESSHISTFILE="-"
 export MANPAGER="nvim +Man!"
