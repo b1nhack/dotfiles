@@ -1,13 +1,11 @@
 #!/bin/zsh
 
-if [[ ! -d "$HOME/.config/fsh" ]]; then
-	mkdir ~/.config/fsh
-fi
+mkdir -p ~/.config/fsh
 ln -sf ~/.config/zsh/plugins/zsh-fsh/themes/catppuccin-macchiato.ini ~/.config/fsh/catppuccin-macchiato.ini
 # fast-theme XDG:catppuccin-macchiato
 
 ln -sf ~/.config/bat/themes/bat/themes/Catppuccin\ Macchiato.tmTheme ~/.config/bat/themes/Catppuccin\ Macchiato.tmTheme
-# bat cache --build
+bat cache --build
 
 ln -sf ~/.config/zsh/.zshenv ~/.zshenv
 
