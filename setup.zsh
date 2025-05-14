@@ -11,9 +11,10 @@ ln -sf ~/.config/bat/themes/bat/themes/Catppuccin\ Macchiato.tmTheme ~/.config/b
 
 ln -sf ~/.config/zsh/.zshenv ~/.zshenv
 
-ln -sf ~/.config/gnupg/gpg.conf ~/.gnupg/gpg.conf
-ln -sf ~/.config/gnupg/gpg-agent.conf ~/.gnupg/gpg-agent.conf
-ln -sf ~/.config/gnupg/dirmngr.conf ~/.gnupg/dirmngr.conf
+mkdir -p ~/.local/share/gnupg
+ln -sf ~/.config/gnupg/gpg.conf ~/.local/share/gnupg/gpg.conf
+ln -sf ~/.config/gnupg/gpg-agent.conf ~/.local/share/gnupg/gpg-agent.conf
+ln -sf ~/.config/gnupg/dirmngr.conf ~/.local/share/gnupg/dirmngr.conf
 
 ln -sf ~/.config/eza/eza-themes/themes/catppuccin.yml ~/.config/eza/theme.yml
 

@@ -17,6 +17,8 @@ export EZA_CONFIG_DIR="$HOME/.config/eza"
 export RUSTUP_HOME="$HOME/.local/share/rustup"
 export RUSTUP_AUTO_INSTALL=0
 
+export GNUPGHOME="$HOME/.local/share/gnupg"
+
 export EDITOR="nvim"
 export LESSHISTFILE="-"
 export MANPAGER="nvim +Man!"
