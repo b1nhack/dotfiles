@@ -6,6 +6,8 @@ export FPATH="/nix/var/nix/profiles/default/share/zsh/site-functions:$FPATH"
 export FPATH="$HOME/.config/zsh/plugins/nix-zsh-completions:$FPATH"
 export FPATH="$HOME/.nix-profile/share/zsh/site-functions:$FPATH"
 
+export PYTHONPATH="$HOME/.nix-profile/lib/python3.13/site-packages"
+
 # https://en.wikipedia.org/wiki/Freedesktop.org#Base_Directory_Specification
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"

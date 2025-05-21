@@ -76,6 +76,12 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/3fcbdcfc707e0aa42c541b7743e05820472bdaec?narHash=sha256-JBXbjJ0t6T6BbVc9iPVquQI9XSXCGQJD8c8SgnUquus%3D
 Store paths:        /nix/store/ixxj0797zh8hylvsjrk6mbsm1pb55y6c-gnupg-2.4.7
 
+Name:               [1mhexdump[0m
+Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.hexdump
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/2f9173bde1d3fbf1ad26ff6d52f952f9e9da52ea?narHash=sha256-NnXFQu7g4LnvPIPfJmBuZF7LFy/fey2g2%2BLCzjQhTUk%3D
+Store paths:        /nix/store/9nxlbawdyymckxp34ndgq2gf55ky8gxj-python3.13-hexdump-3.3
+
 Name:               [1mhexyl[0m
 Flake attribute:    legacyPackages.aarch64-darwin.hexyl
 Original flake URL: flake:nixpkgs
@@ -129,6 +135,12 @@ Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.python-lsp-s
 Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/3fcbdcfc707e0aa42c541b7743e05820472bdaec?narHash=sha256-JBXbjJ0t6T6BbVc9iPVquQI9XSXCGQJD8c8SgnUquus%3D
 Store paths:        /nix/store/dl128k3ailqhqghdli822ql0w6xsd8w8-python3.13-python-lsp-server-1.12.2
+
+Name:               [1mpython313[0m
+Flake attribute:    legacyPackages.aarch64-darwin.python313
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/2f9173bde1d3fbf1ad26ff6d52f952f9e9da52ea?narHash=sha256-NnXFQu7g4LnvPIPfJmBuZF7LFy/fey2g2%2BLCzjQhTUk%3D
+Store paths:        /nix/store/1a8xg8l3m67hxinxzzcsak9736qm9vsf-python3-3.13.3
 
 Name:               [1mqemu[0m
 Flake attribute:    legacyPackages.aarch64-darwin.qemu

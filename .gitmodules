@@ -22,3 +22,6 @@
 [submodule "zsh/plugins/nix-zsh-completions"]
 	path = zsh/plugins/nix-zsh-completions
 	url = https://github.com/nix-community/nix-zsh-completions.git
+[submodule "pwndbg/libslub"]
+	path = pwndbg/libslub
+	url = https://github.com/nccgroup/libslub.git
