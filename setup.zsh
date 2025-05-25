@@ -10,6 +10,7 @@ bat cache --build
 ln -sf ~/.config/zsh/.zshenv ~/.zshenv
 
 mkdir -p ~/.local/share/gnupg
+chmod 0700 ~/.local/share/gnupg
 ln -sf ~/.config/gnupg/gpg.conf ~/.local/share/gnupg/gpg.conf
 ln -sf ~/.config/gnupg/gpg-agent.conf ~/.local/share/gnupg/gpg-agent.conf
 ln -sf ~/.config/gnupg/dirmngr.conf ~/.local/share/gnupg/dirmngr.conf
