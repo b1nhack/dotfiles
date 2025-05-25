@@ -2,6 +2,9 @@ export ZDOTDIR="$HOME/.config/zsh"
 # for fast ESC response in zsh
 export KEYTIMEOUT=1
 
+# for fast ESC response in neomutt
+export ESCDELAY=0
+
 export FPATH="/nix/var/nix/profiles/default/share/zsh/site-functions:$FPATH"
 export FPATH="$HOME/.config/zsh/plugins/nix-zsh-completions:$FPATH"
 export FPATH="$HOME/.nix-profile/share/zsh/site-functions:$FPATH"
