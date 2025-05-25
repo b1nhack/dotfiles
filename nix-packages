@@ -106,6 +106,12 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/fe51d34885f7b5e3e7b59572796e1bcb427eccb1?narHash=sha256-qmmFCrfBwSHoWw7cVK4Aj%2Bfns%2Bc54EBP8cGqp/yK410%3D
 Store paths:        /nix/store/kg6j6vinlig62xg9ivn36hy7vamh4057-python3.13-mdformat-0.7.22
 
+Name:               [1mneomutt[0m
+Flake attribute:    legacyPackages.aarch64-darwin.neomutt
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/fe51d34885f7b5e3e7b59572796e1bcb427eccb1?narHash=sha256-qmmFCrfBwSHoWw7cVK4Aj%2Bfns%2Bc54EBP8cGqp/yK410%3D
+Store paths:        /nix/store/2crsrx0g6735sn70avclhwa2jqx7k7qa-neomutt-20250113
+
 Name:               [1mneovim[0m
 Flake attribute:    legacyPackages.aarch64-darwin.neovim
 Original flake URL: flake:nixpkgs
