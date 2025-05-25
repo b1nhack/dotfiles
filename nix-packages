@@ -202,6 +202,12 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/fe51d34885f7b5e3e7b59572796e1bcb427eccb1?narHash=sha256-qmmFCrfBwSHoWw7cVK4Aj%2Bfns%2Bc54EBP8cGqp/yK410%3D
 Store paths:        /nix/store/vm5ibr470l0xfj2smxrrcq4a2g6vnqmr-tokei-13.0.0-alpha.8
 
+Name:               [1mtree-sitter[0m
+Flake attribute:    legacyPackages.aarch64-darwin.tree-sitter
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/fe51d34885f7b5e3e7b59572796e1bcb427eccb1?narHash=sha256-qmmFCrfBwSHoWw7cVK4Aj%2Bfns%2Bc54EBP8cGqp/yK410%3D
+Store paths:        /nix/store/mcla2hvwrsizgbl5kvvyishibnxwwp48-tree-sitter-0.25.3
+
 Name:               [1muniversal-ctags[0m
 Flake attribute:    legacyPackages.aarch64-darwin.universal-ctags
 Original flake URL: flake:nixpkgs
