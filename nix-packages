@@ -112,12 +112,6 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/3108eaa516ae22c2360928589731a4f1581526ef?narHash=sha256-P3u2PXxMlo49PutQLnk2PhI/imC69hFl1yY4aT5Nax8%3D
 Store paths:        /nix/store/w0nv7pavbj614i0vi80ha0k0binbwl98-marksman-2024-12-18
 
-Name:               [1mmdformat[0m
-Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.mdformat
-Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/3108eaa516ae22c2360928589731a4f1581526ef?narHash=sha256-P3u2PXxMlo49PutQLnk2PhI/imC69hFl1yY4aT5Nax8%3D
-Store paths:        /nix/store/kg6j6vinlig62xg9ivn36hy7vamh4057-python3.13-mdformat-0.7.22
-
 Name:               [1mneomutt[0m
 Flake attribute:    legacyPackages.aarch64-darwin.neomutt
 Original flake URL: flake:nixpkgs
