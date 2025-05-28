@@ -1,3 +1,9 @@
+Name:               [1mbash[0m
+Flake attribute:    legacyPackages.aarch64-darwin.bash
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/e0042dedfbc9134ef973f64e5c7f56a38cc5cc97?narHash=sha256-PsZAY3H0e/PBoDVn4fLwGEmeSwESj7SZPZ6CMfgbWFU%3D
+Store paths:        /nix/store/g2r737j05jgy19c2yqnyvs71w8bxk4b1-bash-interactive-5.2p37 /nix/store/yqmbsgprykp8rkzmnzghjj043zb385ww-bash-interactive-5.2p37-man
+
 Name:               [1mbat[0m
 Flake attribute:    legacyPackages.aarch64-darwin.bat
 Original flake URL: flake:nixpkgs
@@ -100,6 +106,12 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/3108eaa516ae22c2360928589731a4f1581526ef?narHash=sha256-P3u2PXxMlo49PutQLnk2PhI/imC69hFl1yY4aT5Nax8%3D
 Store paths:        /nix/store/a4xksdw5hdcyih71dg8x67jfdh7rch84-hexyl-0.16.0
 
+Name:               [1mlibwebp[0m
+Flake attribute:    legacyPackages.aarch64-darwin.libwebp
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/e0042dedfbc9134ef973f64e5c7f56a38cc5cc97?narHash=sha256-PsZAY3H0e/PBoDVn4fLwGEmeSwESj7SZPZ6CMfgbWFU%3D
+Store paths:        /nix/store/rhpjx4a2ffbvz564zag820rsa8silnf2-libwebp-1.5.0
+
 Name:               [1mlua-language-server[0m
 Flake attribute:    legacyPackages.aarch64-darwin.lua-language-server
 Original flake URL: flake:nixpkgs
@@ -135,6 +147,12 @@ Flake attribute:    legacyPackages.aarch64-darwin.nixfmt-rfc-style
 Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/3108eaa516ae22c2360928589731a4f1581526ef?narHash=sha256-P3u2PXxMlo49PutQLnk2PhI/imC69hFl1yY4aT5Nax8%3D
 Store paths:        /nix/store/r1630if1xipdb4bzyibs8pb6g134laz5-nixfmt-unstable-2025-04-04
+
+Name:               [1moxipng[0m
+Flake attribute:    legacyPackages.aarch64-darwin.oxipng
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/3108eaa516ae22c2360928589731a4f1581526ef?narHash=sha256-P3u2PXxMlo49PutQLnk2PhI/imC69hFl1yY4aT5Nax8%3D
+Store paths:        /nix/store/gjx5pgzcdzd9sh0i3pplif8akmnhgaam-oxipng-9.1.5
 
 Name:               [1mpwndbg[0m
 Flake attribute:    packages.aarch64-darwin.default
