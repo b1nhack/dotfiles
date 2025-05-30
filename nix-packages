@@ -82,6 +82,18 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/3108eaa516ae22c2360928589731a4f1581526ef?narHash=sha256-P3u2PXxMlo49PutQLnk2PhI/imC69hFl1yY4aT5Nax8%3D
 Store paths:        /nix/store/9pa6rygnkrdp03j4ba0w6yb5qid5x3qb-git-2.49.0
 
+Name:               [1mgitdb[0m
+Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.gitdb
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/3866ad91cfc172f08a6839def503d8fc2923c603?narHash=sha256-oS0Gxh63Df8b8r04lqEYDDLKhHIrVr9/JLOn2bn8JaI%3D
+Store paths:        /nix/store/hvfg9gk5fzvcgchspca0kg2jawrzavjg-python3.13-gitdb-4.0.12
+
+Name:               [1mgitpython[0m
+Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.gitpython
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/3866ad91cfc172f08a6839def503d8fc2923c603?narHash=sha256-oS0Gxh63Df8b8r04lqEYDDLKhHIrVr9/JLOn2bn8JaI%3D
+Store paths:        /nix/store/l9n0w776w997yfhgwp5rgqqmngg9sj41-python3.13-gitpython-3.1.44
+
 Name:               [1mgnumake[0m
 Flake attribute:    legacyPackages.aarch64-darwin.gnumake
 Original flake URL: flake:nixpkgs
@@ -154,6 +166,18 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/3108eaa516ae22c2360928589731a4f1581526ef?narHash=sha256-P3u2PXxMlo49PutQLnk2PhI/imC69hFl1yY4aT5Nax8%3D
 Store paths:        /nix/store/gjx5pgzcdzd9sh0i3pplif8akmnhgaam-oxipng-9.1.5
 
+Name:               [1mperl[0m
+Flake attribute:    legacyPackages.aarch64-darwin.perl
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/3866ad91cfc172f08a6839def503d8fc2923c603?narHash=sha256-oS0Gxh63Df8b8r04lqEYDDLKhHIrVr9/JLOn2bn8JaI%3D
+Store paths:        /nix/store/i26m0wdvdgzl8k7l2f1ypgid9wgczj4h-perl-5.40.0-man /nix/store/l6fv4fsik0yv5wdf40d1fzwvpp3gvs4w-perl-5.40.0
+
+Name:               [1mply[0m
+Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.ply
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/3866ad91cfc172f08a6839def503d8fc2923c603?narHash=sha256-oS0Gxh63Df8b8r04lqEYDDLKhHIrVr9/JLOn2bn8JaI%3D
+Store paths:        /nix/store/pdhf9hycw604yagm9qlxpql00lhgq9s9-python3.13-ply-3.11
+
 Name:               [1mpwndbg[0m
 Flake attribute:    packages.aarch64-darwin.default
 Original flake URL: github:pwndbg/pwndbg
@@ -201,6 +225,12 @@ Flake attribute:    legacyPackages.aarch64-darwin.shfmt
 Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/3108eaa516ae22c2360928589731a4f1581526ef?narHash=sha256-P3u2PXxMlo49PutQLnk2PhI/imC69hFl1yY4aT5Nax8%3D
 Store paths:        /nix/store/8mg789vi5cj3k7dq3n28zfv7jxnhydkh-shfmt-3.11.0
+
+Name:               [1msmmap[0m
+Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.smmap
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/3866ad91cfc172f08a6839def503d8fc2923c603?narHash=sha256-oS0Gxh63Df8b8r04lqEYDDLKhHIrVr9/JLOn2bn8JaI%3D
+Store paths:        /nix/store/mm8hadp83384q8apmralkwcixxpjhyzr-python3.13-smmap-6.0.0
 
 Name:               [1mstarship[0m
 Flake attribute:    legacyPackages.aarch64-darwin.starship
