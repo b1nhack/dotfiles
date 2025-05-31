@@ -7,7 +7,7 @@ unmacro * "\CB"
 
 macro generic,index "E" <next-entry><next-entry><next-entry><next-entry><next-entry><next-entry><next-entry><next-entry><next-entry>
 macro generic,index "U" <previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry>
-macro generic,index "C" <sync-mailbox><imap-fetch-mail><refresh> "refresh mails"
+macro generic,index "S" <sync-mailbox><imap-fetch-mail><refresh> "refresh mails"
 
 # Generic Menu
 unbind generic "*"
