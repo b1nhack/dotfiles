@@ -21,14 +21,12 @@ zstyle ':autocomplete:*' delay 0.1 # seconds (float)
 stty discard undef
 stty lnext undef
 stty dsusp undef
-stty erase undef
 stty kill undef
 stty quit undef
 stty reprint undef
 stty start undef
 stty status undef
 stty stop undef
-stty susp undef
 stty werase undef
 
 source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
