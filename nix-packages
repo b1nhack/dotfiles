@@ -136,6 +136,12 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/3866ad91cfc172f08a6839def503d8fc2923c603?narHash=sha256-oS0Gxh63Df8b8r04lqEYDDLKhHIrVr9/JLOn2bn8JaI%3D
 Store paths:        /nix/store/w0nv7pavbj614i0vi80ha0k0binbwl98-marksman-2024-12-18
 
+Name:               [1mmsmtp[0m
+Flake attribute:    legacyPackages.aarch64-darwin.msmtp
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/3866ad91cfc172f08a6839def503d8fc2923c603?narHash=sha256-oS0Gxh63Df8b8r04lqEYDDLKhHIrVr9/JLOn2bn8JaI%3D
+Store paths:        /nix/store/kmc8f9l2k8xgqksnbbf6xzl7ph5mhl3v-msmtp-1.8.26
+
 Name:               [1mneomutt[0m
 Flake attribute:    legacyPackages.aarch64-darwin.neomutt
 Original flake URL: flake:nixpkgs

@@ -1,0 +1,22 @@
+defaults
+
+# TLS commands
+tls on
+tls_starttls off
+
+account b1n
+
+# General commands
+host smtp.migadu.com
+port 465
+domain b1n.io
+
+# Authentication commands
+auth on
+user b1n@b1n.io
+passwordeval "gpg -dq ~/.config/msmtp/pass.gpg"
+
+# Commands specific to sendmail mode
+from Xingquan Liu <b1n@b1n.io>
+
+account default : b1n

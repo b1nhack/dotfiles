@@ -47,12 +47,7 @@
 	defaultBranch = main
 
 [sendemail]
-	smtpServer = smtp.migadu.com
-	smtpUser = b1n@b1n.io
-	smtpEncryption = ssl
-	smtpServerPort = 465
+	sendmailcmd = msmtp
 	confirm = compose
 	annotate = yes
-	from = Xingquan Liu <b1n@b1n.io>
-	smtpDomain = b1n.io
 	xmailer = false
