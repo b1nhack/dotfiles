@@ -17,6 +17,7 @@ user b1n@b1n.io
 passwordeval "gpg -dq ~/.config/msmtp/pass.gpg"
 
 # Commands specific to sendmail mode
-from Xingquan Liu <b1n@b1n.io>
+from b1n@b1n.io
+from_full_name Xingquan Liu
 
 account default : b1n
