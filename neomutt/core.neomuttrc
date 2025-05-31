@@ -1,10 +1,9 @@
 # vim: filetype=neomuttrc
 
-# setup imap and smtp server information
-set folder = $my_folder
-set imap_pass = $my_pass
-set smtp_url = $my_smtp_url
-set smtp_pass = $my_pass
+# imap and msmtp
+set folder = "imaps://b1n@b1n.io@imap.migadu.com"
+set imap_pass = "`gpg -dq ~/.config/msmtp/pass.gpg`"
+set sendmail = "msmtp"
 
 # sending
 set from        = "b1n@b1n.io"
