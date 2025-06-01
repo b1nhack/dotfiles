@@ -52,6 +52,7 @@ set honor_disposition = yes
 set imap_condstore = yes
 set imap_idle = yes
 set imap_qresync = yes
+set include = yes
 set local_date_header = no
 set maildir_header_cache_verify = no
 set mark_old = no
