@@ -23,7 +23,7 @@ set header_cache = "~/.cache/neomutt/"
 set history_file = "~/.cache/neomutt/history"
 set message_cache_dir = "~/.cache/neomutt/"
 set news_cache_dir = "~/.cache/neomutt/news/"
-set signature = "~/.config/neomutt/signature.sig"
+set signature = "~/.config/signature"
 
 set crypt_auto_sign = yes
 set crypt_opportunistic_encrypt = yes

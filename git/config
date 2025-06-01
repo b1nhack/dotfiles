@@ -14,7 +14,7 @@
 
 [format]
 	signOff = yes
-	signature = Xingquan Liu
+	signatureFile = ~/.config/signature
 
 [push]
 	autoSetupRemote = true
