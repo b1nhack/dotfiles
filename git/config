@@ -15,6 +15,7 @@
 [format]
 	signOff = yes
 	signatureFile = ~/.config/signature
+	useAutoBase = yes
 
 [push]
 	autoSetupRemote = true
