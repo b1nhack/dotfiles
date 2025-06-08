@@ -10,6 +10,12 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/e4b09e47ace7d87de083786b404bf232eb6c89d8?narHash=sha256-RlTsJUvvr8ErjPBsiwrGbbHYW8XbB/oek0Gi78XdWKg%3D
 Store paths:        /nix/store/x46am005zdr73n188dqjvh8yak2rwnrd-bat-0.25.0
 
+Name:               [1mbinutils[0m
+Flake attribute:    legacyPackages.aarch64-darwin.binutils
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/a4ff0e3c64846abea89662bfbacf037ef4b34207?narHash=sha256-UAaWOyQhdp7nXzsbmLVC67fo%2BQetzoTm9hsPf9X3yr4%3D
+Store paths:        /nix/store/gln0jnzrr9zqpqy3ci8zyn3fry2k68s1-binutils-wrapper-2.44-man /nix/store/x493kmkk58m14hhwbf0rc4qrr3dz1r7x-binutils-wrapper-2.44
+
 Name:               [1mblack[0m
 Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.black
 Original flake URL: flake:nixpkgs
