@@ -28,6 +28,12 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/e4b09e47ace7d87de083786b404bf232eb6c89d8?narHash=sha256-RlTsJUvvr8ErjPBsiwrGbbHYW8XbB/oek0Gi78XdWKg%3D
 Store paths:        /nix/store/hsv4hkv9gahllijik2p7n9jglip30vhd-clang-tools-20.1.5
 
+Name:               [1mcpio[0m
+Flake attribute:    legacyPackages.aarch64-darwin.cpio
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/e4b09e47ace7d87de083786b404bf232eb6c89d8?narHash=sha256-RlTsJUvvr8ErjPBsiwrGbbHYW8XbB/oek0Gi78XdWKg%3D
+Store paths:        /nix/store/n0k57mrrjs6cp653cn421vsix0npnabl-cpio-2.15
+
 Name:               [1mcscope[0m
 Flake attribute:    legacyPackages.aarch64-darwin.cscope
 Original flake URL: flake:nixpkgs
