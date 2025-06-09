@@ -6,8 +6,18 @@ macro index "E" <next-entry><next-entry><next-entry><next-entry><next-entry><nex
 macro index "S" <sync-mailbox><imap-fetch-mail><refresh> "refresh mails"
 macro index "U" <previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry><previous-entry>
 
-# Generic Menu
 unbind generic
+unbind index
+unbind pager
+unbind alias
+unbind query
+unbind attach
+unbind compose
+unbind postpone
+unbind browser
+unbind editor
+
+# Generic Menu
 unbind generic "q"
 
 bind generic "!" shell-escape
@@ -20,7 +30,6 @@ bind generic "m" search-next
 bind generic "u" previous-entry
 
 # Index Menu
-unbind index
 unbind index "q"
 
 bind index "#" break-thread
@@ -60,35 +69,25 @@ bind index,pager,attach,compose "|" pipe-message
 bind index,pager,query "a" create-alias
 
 # Pager Menu
-unbind pager
-
 bind pager "T" toggle-quoted
 bind pager "e" half-down
 bind pager "u" half-up
 
 # Alias Menu
-unbind alias
-
 bind alias "d" delete-entry
 bind alias "l" undelete-entry
 
 # Query Menu
-unbind query
-
 bind query "A" query-append
 bind query "Q" query
 
 # Attachment Menu
-unbind attach
-
 bind attach "<Return>" view-text
 bind attach "d" delete-entry
 bind attach "l" undelete-entry
 bind attach "s" save-entry
 
 # Compose Menu
-unbind compose
-
 bind compose "+" move-down
 bind compose "-" move-up
 bind compose "A" attach-message
@@ -103,14 +102,10 @@ bind compose "s" copy-file
 bind compose "v" edit-file
 
 # Postpone Menu
-unbind postpone
-
 bind postpone "d" delete-entry
 bind postpone "l" undelete-entry
 
 # Browser Menu
-unbind browser
-
 bind browser "-" goto-parent
 bind browser "C" create-mailbox
 bind browser "T" toggle-mailboxes
@@ -123,8 +118,6 @@ bind browser "v" view-file
 # Smime Menu
 
 # Editor Menu
-unbind editor
-
 bind editor "<Space>h" help
 bind editor "<Tab>" complete
 bind editor "\CA" eol
