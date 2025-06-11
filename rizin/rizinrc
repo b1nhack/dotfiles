@@ -1,0 +1,8 @@
+e asm.syntax=att
+e asm.tabs=8
+
+e scr.utf8.curvy=true
+
+e cfg.fortunes=false
+
+e cmd.repeat=true

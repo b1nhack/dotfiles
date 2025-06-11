@@ -21,6 +21,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export EZA_CONFIG_DIR="$HOME/.config/eza"
 
+export RZ_RCFILE="$HOME/.config/rizin/rizinrc"
+
 export RUSTUP_HOME="$HOME/.local/share/rustup"
 export RUSTUP_AUTO_INSTALL=0
 
