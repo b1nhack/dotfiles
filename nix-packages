@@ -1,317 +1,317 @@
 Name:               [1mbash[0m
 Flake attribute:    legacyPackages.aarch64-darwin.bash
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/g2r737j05jgy19c2yqnyvs71w8bxk4b1-bash-interactive-5.2p37 /nix/store/yqmbsgprykp8rkzmnzghjj043zb385ww-bash-interactive-5.2p37-man
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/imh57jk6y22jfyd3f0rghpblg5ppn3qr-bash-interactive-5.2p37-man /nix/store/nqh4lv0w7n7cw7n8vvn2gfzv804y4hk6-bash-interactive-5.2p37
 
 Name:               [1mbat[0m
 Flake attribute:    legacyPackages.aarch64-darwin.bat
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/x46am005zdr73n188dqjvh8yak2rwnrd-bat-0.25.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/nqzkm1y51skwp082vr8nraw36k8qzbja-bat-0.25.0
 
 Name:               [1mbintools[0m
 Flake attribute:    legacyPackages.aarch64-darwin.llvmPackages_20.bintools
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/bs7mhvn4ghhgpapq2mb7gp3x7rmqwssh-llvm-binutils-wrapper-20.1.5
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/iasqf0kqbhxba9vg5aizhgig07kig225-llvm-binutils-wrapper-20.1.6
 
 Name:               [1mblack[0m
 Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.black
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/93q0l1hsras7k7rjyl0ik9xxbfxj18ic-python3.13-black-25.1.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/ibawdp8jb8gm3dwhvixh931j66m5c63v-python3.13-black-25.1.0
 
 Name:               [1mbrotli[0m
 Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.brotli
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/b19g6bnwqi1k91nbibfzadxk5ajps4pa-python3.13-brotli-1.1.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/9khk5fzd9am9b7xvzli1yfjwn59jr9gg-python3.13-brotli-1.1.0
 
 Name:               [1mclang-tools[0m
 Flake attribute:    legacyPackages.aarch64-darwin.llvmPackages_20.clang-tools
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/hsv4hkv9gahllijik2p7n9jglip30vhd-clang-tools-20.1.5
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/09lwf5m40ykz89h10bq27lg68ypq42py-clang-tools-20.1.6
 
 Name:               [1mcpio[0m
 Flake attribute:    legacyPackages.aarch64-darwin.cpio
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/n0k57mrrjs6cp653cn421vsix0npnabl-cpio-2.15
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/vk7zj1yppwzwkd41bfcdfrwx342xd7k2-cpio-2.15
 
 Name:               [1mcscope[0m
 Flake attribute:    legacyPackages.aarch64-darwin.cscope
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/mb4zfkid8mpxbmlfbvjg5ifcl8jrs613-cscope-15.9
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/pcxfymqznyv2pm48qnadly16dn4r1z41-cscope-15.9
 
 Name:               [1mdelta[0m
 Flake attribute:    legacyPackages.aarch64-darwin.delta
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/0chjdvm118jxp0nfk1hp4hvi87q9hfzs-delta-0.18.2
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/4xvy8sfcxyw08r32wq47q73ms9pklvxr-delta-0.18.2
 
 Name:               [1mdust[0m
 Flake attribute:    legacyPackages.aarch64-darwin.dust
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/p3wx384znv7zhjlcy9ycn5kiv40ifc4b-du-dust-1.2.1
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/ghxnnpfvhnhwizda0h9v4wqlrz9h4p70-du-dust-1.2.1
 
 Name:               [1meza[0m
 Flake attribute:    legacyPackages.aarch64-darwin.eza
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/855psl13ns20bny0gm5allwpq4f0dgxw-eza-0.21.4-man /nix/store/qaxhgr89vbz3yx12cw6md403rlays627-eza-0.21.4
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/3xmpp33yxsgwc33yb7205lk46sl39j0i-eza-0.21.5 /nix/store/lmmnighydak5bnrxwbgm9q679r9qdp3x-eza-0.21.5-man
 
 Name:               [1mfastfetch[0m
 Flake attribute:    legacyPackages.aarch64-darwin.fastfetch
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/3i5202zx68bjj1g44421ayxnscapciww-fastfetch-2.45.0-man /nix/store/qahlax8iwbdw8m276cv7v55kz6z2rbw6-fastfetch-2.45.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/gailbzav2w04qw1rr6pif8gxnfnp9w5s-fastfetch-2.46.0 /nix/store/ngayis9sx73v8l345jmvyzg5vfpyk92q-fastfetch-2.46.0-man
 
 Name:               [1mfd[0m
 Flake attribute:    legacyPackages.aarch64-darwin.fd
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/wigamlnywkjdgqf9xb2079p27nhy32h6-fd-10.2.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/4f5fr1i9a2x0wghnjf6sf34lpqd1ncml-fd-10.2.0
 
 Name:               [1mffsend[0m
 Flake attribute:    legacyPackages.aarch64-darwin.ffsend
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/6dlqdhrl7gnpnh8gi4awj9sha8asy4jx-ffsend-0.2.76
+Locked flake URL:   github:NixOS/nixpkgs/d55716bb59b91ae9d1ced4b1ccdea7a442ecbfdb?narHash=sha256-QWJ%2BNQbMU%2BNcU2xiyo7SNox1fAuwksGlQhpzBl76g1I%3D
+Store paths:        /nix/store/q4n2vycf8abj1himghq42a6plps7y88q-ffsend-0.2.77
 
 Name:               [1mfonttools[0m
 Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.fonttools
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/kvz5n99ar0lr1229s22yqm01lzfvxcv4-python3.13-fonttools-4.56.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/p1ksnc43kkaafii6q3lxxnw0x1f5272w-python3.13-fonttools-4.56.0
 
 Name:               [1mgit[0m
 Flake attribute:    legacyPackages.aarch64-darwin.git
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/9pa6rygnkrdp03j4ba0w6yb5qid5x3qb-git-2.49.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/ir2bhb7n3ngh0dg7p6jbhm1wa4d8gkb7-git-2.49.0
 
 Name:               [1mgitdb[0m
 Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.gitdb
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/hvfg9gk5fzvcgchspca0kg2jawrzavjg-python3.13-gitdb-4.0.12
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/2vjiiwslgpxm85qgzc2k09q325fbcn3l-python3.13-gitdb-4.0.12
 
 Name:               [1mgitpython[0m
 Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.gitpython
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/l9n0w776w997yfhgwp5rgqqmngg9sj41-python3.13-gitpython-3.1.44
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/63ljy9qgfhasqdk6z4kmbrzl2s9k9s5g-python3.13-gitpython-3.1.44
 
 Name:               [1mgnumake[0m
 Flake attribute:    legacyPackages.aarch64-darwin.gnumake
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/wkq7f52a2xq4n24f545wy2fidm4z14f2-gnumake-4.4.1 /nix/store/x59n9rzr26vf9cr0aapfakhrqhg7vy18-gnumake-4.4.1-man
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/dk7vh49s82kl68y3pv4b5glmz31xh255-gnumake-4.4.1-man /nix/store/r7m07s173xa5nlii49999m0666i4sh27-gnumake-4.4.1
 
 Name:               [1mgnupg[0m
 Flake attribute:    legacyPackages.aarch64-darwin.gnupg
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/ixxj0797zh8hylvsjrk6mbsm1pb55y6c-gnupg-2.4.7
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/as7lycr0g57anmdbclmfd9hr8lchlq28-gnupg-2.4.7
 
 Name:               [1mhexdump[0m
 Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.hexdump
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/9nxlbawdyymckxp34ndgq2gf55ky8gxj-python3.13-hexdump-3.3
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/54sqnl4633azr4cd34cfjdc99wpss34d-python3.13-hexdump-3.3
 
 Name:               [1mhexyl[0m
 Flake attribute:    legacyPackages.aarch64-darwin.hexyl
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/a4xksdw5hdcyih71dg8x67jfdh7rch84-hexyl-0.16.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/s2vxsir170jc9jvk5azn1slyp0vqal0g-hexyl-0.16.0
 
 Name:               [1mlibwebp[0m
 Flake attribute:    legacyPackages.aarch64-darwin.libwebp
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/rhpjx4a2ffbvz564zag820rsa8silnf2-libwebp-1.5.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/jvn10ymci82i9934mgc6kb4518w0gjig-libwebp-1.5.0
 
 Name:               [1mlua-language-server[0m
 Flake attribute:    legacyPackages.aarch64-darwin.lua-language-server
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/hniglnpc8w85f8d20qr57n3r7gwra8m5-lua-language-server-3.14.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/3iycgasf4faf1idqwf5f6dlwk5snf55y-lua-language-server-3.14.0
 
 Name:               [1mmarksman[0m
 Flake attribute:    legacyPackages.aarch64-darwin.marksman
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/w0nv7pavbj614i0vi80ha0k0binbwl98-marksman-2024-12-18
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/mygjk9vlzrsha06sg8i9598p4cnrk6n2-marksman-2024-12-18
 
 Name:               [1mmsmtp[0m
 Flake attribute:    legacyPackages.aarch64-darwin.msmtp
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/kmc8f9l2k8xgqksnbbf6xzl7ph5mhl3v-msmtp-1.8.26
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/hqnm4jj4ygnh7285kcxrdln9sbzhc5nc-msmtp-1.8.26
 
 Name:               [1mneomutt[0m
 Flake attribute:    legacyPackages.aarch64-darwin.neomutt
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/2crsrx0g6735sn70avclhwa2jqx7k7qa-neomutt-20250113
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/cxlmsf62ndvz87wczfw2k522y7v8wazr-neomutt-20250510
 
 Name:               [1mneovim[0m
 Flake attribute:    legacyPackages.aarch64-darwin.neovim
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/4k6v3m3q2afh57a43cdnhg1vlphz2yhr-neovim-0.11.2
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/hgfn7jmx0ynk73nibw355r0salw8nxg2-neovim-0.11.2
 
 Name:               [1mnixd[0m
 Flake attribute:    legacyPackages.aarch64-darwin.nixd
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/5xjhkqq4dni4h1aw8ljdk9qigq33hdcl-nixd-2.6.4
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/2w582mypm8x8fk1lfljvpsihspng27p0-nixd-2.6.4
 
 Name:               [1mnixfmt-rfc-style[0m
 Flake attribute:    legacyPackages.aarch64-darwin.nixfmt-rfc-style
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/r1630if1xipdb4bzyibs8pb6g134laz5-nixfmt-unstable-2025-04-04
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/28lrcgp11izccfpvl1n1am1fkvangvi5-nixfmt-unstable-2025-04-04
 
 Name:               [1moxipng[0m
 Flake attribute:    legacyPackages.aarch64-darwin.oxipng
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/gjx5pgzcdzd9sh0i3pplif8akmnhgaam-oxipng-9.1.5
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/7zm51i08pn3a494mcqsjm4j6ywmri9zc-oxipng-9.1.5
 
 Name:               [1mperl[0m
 Flake attribute:    legacyPackages.aarch64-darwin.perl
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/i26m0wdvdgzl8k7l2f1ypgid9wgczj4h-perl-5.40.0-man /nix/store/l6fv4fsik0yv5wdf40d1fzwvpp3gvs4w-perl-5.40.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/gsgrv076sl8gkq6pmr8q3x77kk41ygbw-perl-5.40.0 /nix/store/sgxcd5dydvfhj1wsphns7bxn01frad62-perl-5.40.0-man
 
 Name:               [1mply[0m
 Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.ply
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/pdhf9hycw604yagm9qlxpql00lhgq9s9-python3.13-ply-3.11
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/y6cflv1iijlzilfxfnkhv23vb3np5j89-python3.13-ply-3.11
 
 Name:               [1mpwndbg[0m
 Flake attribute:    packages.aarch64-darwin.default
 Original flake URL: github:pwndbg/pwndbg
-Locked flake URL:   github:pwndbg/pwndbg/ef8a6509a9e35b5b305ffb7b4fa7fdf6e43acd51?narHash=sha256-axIu5BQdVpqlQO8cXvfcotHq%2BaWgmreXPE0YRCqo0U0%3D
-Store paths:        /nix/store/8qs2siwy36zqzm9s3jwwdh972f1zg2ki-pwndbg
+Locked flake URL:   github:pwndbg/pwndbg/e6dacb29df9103ab6547a654013643c84e20ea11?narHash=sha256-0cMRjRYuFZ5G9J1XNPlyDg7BntrvoE4VwMdl1OQCfEU%3D
+Store paths:        /nix/store/jna3wqsxc4yggnck39bg9qp4sidx8gq3-pwndbg
 
 Name:               [1mpython-lsp-server[0m
 Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.python-lsp-server
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/dl128k3ailqhqghdli822ql0w6xsd8w8-python3.13-python-lsp-server-1.12.2
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/3761jjy6zrgxcrd0s18ah1lx70avifwb-python3.13-python-lsp-server-1.12.2
 
 Name:               [1mpython313[0m
 Flake attribute:    legacyPackages.aarch64-darwin.python313
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/1a8xg8l3m67hxinxzzcsak9736qm9vsf-python3-3.13.3
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/j1spz18w5a10r9nj4wpkyh0cx730rs4z-python3-3.13.4
 
 Name:               [1mqemu[0m
 Flake attribute:    legacyPackages.aarch64-darwin.qemu
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/vcg0fc14imj2jrrk1ll57q6zamafg3r1-qemu-9.2.3
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/jjc98gffrsyqbn6ic1n4lr9mrp0gl8yk-qemu-10.0.0
 
 Name:               [1mripgrep[0m
 Flake attribute:    legacyPackages.aarch64-darwin.ripgrep
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/7sm130rzasd97g50bclmbdvn0s6fdprs-ripgrep-14.1.1
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/xygyyr4jqazmdmqf9x5pqkxnkcp9w0h8-ripgrep-14.1.1
 
 Name:               [1mrizin[0m
 Flake attribute:    legacyPackages.aarch64-darwin.rizin
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/hplrz7n0ci1z7mr3nnf5q8bnzn0hgd73-rizin-0.8.1
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/lij4z06l95xdm3zn6fwnqn35589whai9-rizin-0.8.1
 
 Name:               [1mrustup[0m
 Flake attribute:    legacyPackages.aarch64-darwin.rustup
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/jzf2xrccygh4afih9vxilf1caykwpn8j-rustup-1.28.2
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/nb1gl6mqgf2hi7pllaphz83dykxc3b1m-rustup-1.28.2
 
 Name:               [1msd[0m
 Flake attribute:    legacyPackages.aarch64-darwin.sd
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/lprkcz7q42jyvz5693ahjs9hyf2f4y73-sd-1.0.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/yifaikb6i33wfnjff22qrcb3pnbll3wg-sd-1.0.0
 
 Name:               [1mshfmt[0m
 Flake attribute:    legacyPackages.aarch64-darwin.shfmt
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/8mg789vi5cj3k7dq3n28zfv7jxnhydkh-shfmt-3.11.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/0iybql4yr8rwvfrlyg3d4cal5dsbag2r-shfmt-3.11.0
 
 Name:               [1msmmap[0m
 Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.smmap
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/mm8hadp83384q8apmralkwcixxpjhyzr-python3.13-smmap-6.0.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/294wkd83vjlzvq0g6fr4jyskxd9gy7y6-python3.13-smmap-6.0.0
 
 Name:               [1mstarship[0m
 Flake attribute:    legacyPackages.aarch64-darwin.starship
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/pn12pmvwsyb69pnmjhllbcwdwnyqj33v-starship-1.23.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/k1k1zwpqn5gfgdqql1z5g18i5vzrva3n-starship-1.23.0
 
 Name:               [1mstylua[0m
 Flake attribute:    legacyPackages.aarch64-darwin.stylua
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/y277fx5d9wdq8s93nzznzlvd2z05zsnw-stylua-2.1.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/g5bmpv8iz29i73jlvyr4xmc4agim98ap-stylua-2.1.0
 
 Name:               [1mtealdeer[0m
 Flake attribute:    legacyPackages.aarch64-darwin.tealdeer
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/6md9mx803pcc5z0qzjbr3mkqh7yrrbny-tealdeer-1.7.2
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/ihd30vlkjr1411495s7jkz3d5j6xm1z9-tealdeer-1.7.2
 
 Name:               [1mtokei[0m
 Flake attribute:    legacyPackages.aarch64-darwin.tokei
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/gxy8gqc2dgfxinbafq3iivxsyaq5a7s0-tokei-13.0.0-alpha.8
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/pm30l0i94iazfg3hj1zljxprprjbfj2c-tokei-13.0.0-alpha.8
 
 Name:               [1mtree-sitter[0m
 Flake attribute:    legacyPackages.aarch64-darwin.tree-sitter
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/mcla2hvwrsizgbl5kvvyishibnxwwp48-tree-sitter-0.25.3
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/d390wk6c2rj3357f945ynxdxy2h4z1qh-tree-sitter-0.25.4
 
 Name:               [1muniversal-ctags[0m
 Flake attribute:    legacyPackages.aarch64-darwin.universal-ctags
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/xbvrl04c0gmf6vrgniyfvvyv90fgcjmb-universal-ctags-6.2.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/g5lcq7r2j2xmxv4pzdidhwpb0kvg7c13-universal-ctags-6.2.0
 
 Name:               [1mwget[0m
 Flake attribute:    legacyPackages.aarch64-darwin.wget
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/r661sv27f43kg6986n0zjm2yq0vb4rnw-wget-1.25.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/6qflhmnidwny5d2pnp305041q1hnhh8h-wget-1.25.0
 
 Name:               [1mxh[0m
 Flake attribute:    legacyPackages.aarch64-darwin.xh
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/0f74f5y0iy4791wrq810sgpf0z2psbsc-xh-0.24.1
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/bck4hb1372h75a13gc6kr6pxx6hp18d3-xh-0.24.1
 
 Name:               [1mzola[0m
 Flake attribute:    legacyPackages.aarch64-darwin.zola
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/q8cprxnfl0lm4v0cfdmmzqd8l4ciag2v-zola-0.20.0
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/gga1xz85s32nwwhzk5jccnby2jgl9nqv-zola-0.20.0
 
 Name:               [1mzsh[0m
 Flake attribute:    legacyPackages.aarch64-darwin.zsh
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/6afe187897bef7933475e6af374c893f4c84a293?narHash=sha256-K9yBph93OLTNw02Q6e9CYFGrUhvEXnh45vrZqIRWfvQ%3D
-Store paths:        /nix/store/1qyfxzg1p1ggn727lh1ryi0zxvg2mrgj-zsh-5.9 /nix/store/r6983wp25qnwiy2qqii7g174bicjkam7-zsh-5.9-man
+Locked flake URL:   github:NixOS/nixpkgs/80d50fc87924c2a0d346372d242c27973cf8cdbf?narHash=sha256-3u6rEbIX9CN/5A5/mc3u0wIO1geZ0EhjvPBXmRDHqWM%3D
+Store paths:        /nix/store/ci1r7g34rnnfbi9frkd60cz1a2wwwrbw-zsh-5.9-man /nix/store/q1sbxjkv542kwgb9qjdhb4k0lravazls-zsh-5.9
