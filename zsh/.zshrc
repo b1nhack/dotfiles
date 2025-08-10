@@ -18,14 +18,17 @@ zle -N edit-command-line
 zstyle ':autocomplete:*' min-input 2
 zstyle ':autocomplete:*' delay 0.1 # seconds (float)
 
+os=$(uname)
+if [[ $os == "Darwin" ]]; then
+	stty dsusp undef
+	stty reprint undef
+	stty status undef
+fi
 stty discard undef
 stty lnext undef
-stty dsusp undef
 stty kill undef
 stty quit undef
-stty reprint undef
 stty start undef
-stty status undef
 stty stop undef
 stty werase undef
 

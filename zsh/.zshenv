@@ -39,7 +39,9 @@ export FFSEND_DOWNLOAD_LIMIT="1"
 export FFSEND_ARCHIVE="1"
 export FFSEND_VERBOSE="1"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ -e "/opt/homebrew/bin/brew" ]]; then
+	eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 export HOMEBREW_BAT=1
 export HOMEBREW_CLEANUP_MAX_AGE_DAYS=3
 export HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS=3
