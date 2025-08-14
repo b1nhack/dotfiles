@@ -130,6 +130,12 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/2baf8e1658cba84a032c3a8befb1e7b06629242a?narHash=sha256-oVZt8VRJkO2Gytc7D2Pfqqy7wTnSECzdKPnoL9z8iFA%3D
 Store paths:        /nix/store/7ybcriwnl6ywkgkjma7pvvhag8b0bhnq-hexyl-0.16.0
 
+Name:               [1mlemonade[0m
+Flake attribute:    legacyPackages.aarch64-darwin.lemonade
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/d74de548348c46cf25cb1fcc4b74f38103a4590d?narHash=sha256-Ix7ALeaxv9tW4uBKWeJnaKpYZtZiX4H4Q/MhEmj4XYA%3D
+Store paths:        /nix/store/v6lv8w9sjb1aalnw3wps3kv09c2d4rxw-lemonade-unstable-2021-06-18
+
 Name:               [1mlibwebp[0m
 Flake attribute:    legacyPackages.aarch64-darwin.libwebp
 Original flake URL: flake:nixpkgs
