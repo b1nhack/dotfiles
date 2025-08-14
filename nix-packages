@@ -29,10 +29,10 @@ Locked flake URL:   github:NixOS/nixpkgs/2baf8e1658cba84a032c3a8befb1e7b06629242
 Store paths:        /nix/store/xksc5pn8jhrzhi54kzqc3ckxpwb2f1qa-python3.13-brotli-1.1.0
 
 Name:               [1mclang-tools[0m
-Flake attribute:    legacyPackages.aarch64-darwin.llvmPackages_20.clang-tools
+Flake attribute:    legacyPackages.aarch64-darwin.llvmPackages_21.clang-tools
 Original flake URL: flake:nixpkgs
-Locked flake URL:   github:NixOS/nixpkgs/2baf8e1658cba84a032c3a8befb1e7b06629242a?narHash=sha256-oVZt8VRJkO2Gytc7D2Pfqqy7wTnSECzdKPnoL9z8iFA%3D
-Store paths:        /nix/store/z8i1qkv3xna4xdx8rly2vg0fr03j72gs-clang-tools-20.1.6
+Locked flake URL:   github:NixOS/nixpkgs/d74de548348c46cf25cb1fcc4b74f38103a4590d?narHash=sha256-Ix7ALeaxv9tW4uBKWeJnaKpYZtZiX4H4Q/MhEmj4XYA%3D
+Store paths:        /nix/store/mig3132711hpl4cfd8jyhjpq0b8whlbk-clang-tools-21.1.0-rc2
 
 Name:               [1mcpio[0m
 Flake attribute:    legacyPackages.aarch64-darwin.cpio
