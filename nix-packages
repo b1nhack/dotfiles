@@ -238,6 +238,12 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/37ff64b7108517f8b6ba5705ee5085eac636a249?narHash=sha256-mBecwgUTWRgClJYqcF%2By4O1bY8PQHqeDpB%2BzsAn%2B/zA%3D
 Store paths:        /nix/store/cpa4k8khm4h4b6i3alhy2s1l8p3lazig-rizin-0.8.1
 
+Name:               [1mrsync[0m
+Flake attribute:    legacyPackages.aarch64-darwin.rsync
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/aaff8c16d7fc04991cac6245bee1baa31f72b1e1?narHash=sha256-12V64nKG/O/guxSYnr5/nq1EfqwJCdD2%2BcIGmhz3nrE%3D
+Store paths:        /nix/store/k3hyb1vc7mahrmfjpwim0mmr4a9kc54a-rsync-3.4.1
+
 Name:               [1mrustup[0m
 Flake attribute:    legacyPackages.aarch64-darwin.rustup
 Original flake URL: flake:nixpkgs
