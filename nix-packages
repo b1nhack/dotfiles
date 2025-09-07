@@ -172,6 +172,12 @@ Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/c6a788f552b7b7af703b1a29802a7233c0067908?narHash=sha256-6n/n1GZQ/vi%2BLhFXMSyoseKdNfc2QQaSBXJdgamrbkE%3D
 Store paths:        /nix/store/7kb5liqdwvqz5fx0vn4rn9xz9b3hpmci-neovim-0.11.4
 
+Name:               [1mnetcat-gnu[0m
+Flake attribute:    legacyPackages.aarch64-darwin.netcat-gnu
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/c6a788f552b7b7af703b1a29802a7233c0067908?narHash=sha256-6n/n1GZQ/vi%2BLhFXMSyoseKdNfc2QQaSBXJdgamrbkE%3D
+Store paths:        /nix/store/fqch563inzgq2qx633xnngbvzy4ji38y-netcat-gnu-0.7.1
+
 Name:               [1mnixd[0m
 Flake attribute:    legacyPackages.aarch64-darwin.nixd
 Original flake URL: flake:nixpkgs
@@ -201,6 +207,12 @@ Flake attribute:    legacyPackages.aarch64-darwin.python313Packages.ply
 Original flake URL: flake:nixpkgs
 Locked flake URL:   github:NixOS/nixpkgs/c6a788f552b7b7af703b1a29802a7233c0067908?narHash=sha256-6n/n1GZQ/vi%2BLhFXMSyoseKdNfc2QQaSBXJdgamrbkE%3D
 Store paths:        /nix/store/20kf3c306sz19nhl60qby81f7m0xm38h-python3.13-ply-3.11
+
+Name:               [1mpv[0m
+Flake attribute:    legacyPackages.aarch64-darwin.pv
+Original flake URL: flake:nixpkgs
+Locked flake URL:   github:NixOS/nixpkgs/c6a788f552b7b7af703b1a29802a7233c0067908?narHash=sha256-6n/n1GZQ/vi%2BLhFXMSyoseKdNfc2QQaSBXJdgamrbkE%3D
+Store paths:        /nix/store/9p8brwmmpzf15nrghkiz5zf29v9azm51-pv-1.9.34
 
 Name:               [1mpwndbg[0m
 Flake attribute:    packages.aarch64-darwin.default
