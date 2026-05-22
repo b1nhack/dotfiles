@@ -18,19 +18,13 @@ zle -N edit-command-line
 zstyle ':autocomplete:*' min-input 2
 zstyle ':autocomplete:*' delay 0.1 # seconds (float)
 
-os=$(uname)
-if [[ $os == "Darwin" ]]; then
-	stty dsusp undef
-	stty reprint undef
-	stty status undef
-fi
-stty discard undef
-stty lnext undef
-stty kill undef
 stty quit undef
+stty kill undef
 stty start undef
 stty stop undef
 stty werase undef
+stty lnext undef
+stty discard undef
 
 source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
 source $ZDOTDIR/plugins/nix-zsh-completions/nix-zsh-completions.plugin.zsh
