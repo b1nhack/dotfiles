@@ -3,53 +3,48 @@
 	"modules": [
 		"title",
 		"separator",
-		"os",
-		"host",
+		{
+			"type": "os",
+			"format": "{name}",
+		},
+		{
+			"type": "host",
+			"format": "{version}",
+		},
 		"kernel",
 		"uptime",
 		{
 			"type": "shell",
-			"format": "{6} {4}",
-
+			"format": "{pretty-name} {version}",
 		},
 		"editor",
 		"terminal",
 		{
 			"type": "display",
-			"format": "{1}x{2} @ {3}Hz {14}bit",
+			"format": "{width}x{height} @ {refresh-rate}Hz",
 			"key": "Display",
 		},
-		"cpu",
+		{
+			"type": "cpu",
+			"format": "{name} @ {freq-max}",
+		},
 		{
 			"type": "gpu",
-			"format": "{2} ({5}) @ {12}",
+			"format": "{name}",
 		},
 		{
 			"type": "memory",
-			"percent": {
-				"green": 75,
-				"yellow": 90,
-			},
-			"format": "{2} {3}",
+			"format": "{total} {percentage}",
 		},
 		{
 			"type": "disk",
 			"showExternal": false,
-			"percent": {
-				"green": 75,
-				"yellow": 90,
-			},
-			"format": "{2} {3}",
+			"format": "{size-total} {size-percentage}",
 			"key": "Disk",
 		},
 		{
-			"type": "localip",
-			"showMac": true,
-			"key": "IP",
-		},
-		{
 			"type": "battery",
-			"format": "{4} {5}",
+			"format": "{capacity} {status}",
 			"key": "Battery",
 		},
 		"break",
