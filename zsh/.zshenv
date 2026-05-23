@@ -6,7 +6,7 @@ export KEYTIMEOUT=1
 # for fast ESC response in neomutt
 export ESCDELAY=0
 
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/share/cargo/bin:$PATH"
 
 export FPATH="$HOME/.config/zsh/plugins/nix-zsh-completions:$FPATH"
 
@@ -14,6 +14,7 @@ export EZA_CONFIG_DIR="$HOME/.config/eza"
 export RZ_RCFILE="$HOME/.config/rizin/rizinrc"
 
 export RUSTUP_HOME="$HOME/.local/share/rustup"
+export CARGO_HOME="$HOME/.local/share/cargo"
 export RUSTUP_AUTO_INSTALL=0
 
 export GNUPGHOME="$HOME/.local/share/gnupg"
