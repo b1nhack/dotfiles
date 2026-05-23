@@ -1,7 +1,0 @@
-cask "betterzip"
-cask "font-jetbrains-mono-nerd-font"
-cask "iina"
-cask "keepassxc"
-cask "kitty"
-cask "parallels"
-cask "surge"
