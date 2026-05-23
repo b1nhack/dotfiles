@@ -26,7 +26,7 @@ bindkey -M vicmd "N" vi-first-non-blank
 bindkey -M vicmd "^N" vi-insert-bol
 bindkey -M vicmd "i" vi-forward-char
 bindkey -M vicmd "I" vi-end-of-line
-bindkey -M vicmd "^I" vi-add-eol
+bindkey -M vicmd "^[[105;5u" vi-add-eol # Ctrl+i in CSI u, configured in ghostty
 bindkey -M vicmd "^v" edit-command-line
 
 bindkey -M vicmd "b" vi-backward-word
@@ -63,7 +63,7 @@ bindkey -M vicmd "J" vi-join
 
 # viins
 bindkey -M viins "^N" vi-insert-bol
-bindkey -M viins "^I" vi-add-eol # Ctrl+i in CSI u, configured in kitty.conf
+bindkey -M viins "^[[105;5u" vi-add-eol # Ctrl+i in CSI u, configured in ghostty
 bindkey -M viins "^v" edit-command-line
 bindkey -M viins "^H" history-substring-search-up
 bindkey -M viins "^B" history-substring-search-down
