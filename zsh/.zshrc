@@ -27,7 +27,6 @@ stty lnext undef
 stty discard undef
 
 source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
-source $ZDOTDIR/plugins/nix-zsh-completions/nix-zsh-completions.plugin.zsh
 source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $ZDOTDIR/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 

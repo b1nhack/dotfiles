@@ -8,8 +8,6 @@ export ESCDELAY=0
 
 export PATH="$HOME/.local/share/cargo/bin:$PATH"
 
-export FPATH="$HOME/.config/zsh/plugins/nix-zsh-completions:$FPATH"
-
 export EZA_CONFIG_DIR="$HOME/.config/eza"
 export RZ_RCFILE="$HOME/.config/rizin/rizinrc"
 
