@@ -8,3 +8,4 @@ keybind = super+t=new_tab
 keybind = alt+[=previous_tab
 keybind = alt+]=next_tab
 keybind = super+d=close_surface
+keybind = ctrl+i=csi:105;5u
