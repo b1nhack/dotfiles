@@ -2,3 +2,4 @@ source ~/.config/gdb/gef/gef.py
 
 set disassembly-flavor att
 set history save off
+set debuginfod enabled on
