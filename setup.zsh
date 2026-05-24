@@ -18,3 +18,5 @@ ln -sf ~/.config/gnupg/dirmngr.conf ~/.local/share/gnupg/dirmngr.conf
 ln -sf ~/.config/eza/eza-themes/themes/catppuccin.yml ~/.config/eza/theme.yml
 
 ln -sf ~/.config/pwndbg/.gdbinit ~/.gdbinit
+
+dconf load / <~/.config/dconf.ini
