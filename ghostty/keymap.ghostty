@@ -7,5 +7,13 @@ keybind = super+r=clear_screen
 keybind = super+t=new_tab
 keybind = alt+[=previous_tab
 keybind = alt+]=next_tab
+keybind = super+u=new_split:up
+keybind = super+e=new_split:down
+keybind = super+n=new_split:left
+keybind = super+i=new_split:right
+keybind = alt+shift+u=goto_split:up
+keybind = alt+shift+e=goto_split:down
+keybind = alt+shift+n=goto_split:left
+keybind = alt+shift+i=goto_split:right
 keybind = super+d=close_surface
 keybind = ctrl+i=csi:105;5u
