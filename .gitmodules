@@ -22,6 +22,3 @@
 [submodule "pwndbg/libslub"]
 	path = pwndbg/libslub
 	url = https://github.com/nccgroup/libslub.git
-[submodule "gdb/gef"]
-	path = gdb/gef
-	url = https://github.com/hugsy/gef.git
