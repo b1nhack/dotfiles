@@ -20,3 +20,10 @@ ln -sf ~/.config/eza/eza-themes/themes/catppuccin.yml ~/.config/eza/theme.yml
 ln -sf ~/.config/pwndbg/.gdbinit ~/.gdbinit
 
 dconf load / <~/.config/dconf.ini
+
+# enable multimedia
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing
+sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo dnf install mesa-va-drivers-freeworld
