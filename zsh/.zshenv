@@ -6,7 +6,8 @@ export KEYTIMEOUT=1
 # for fast ESC response in neomutt
 export ESCDELAY=0
 
-export PATH="$HOME/.local/share/cargo/bin:$PATH"
+export PATH="$PATH:$HOME/.local/share/cargo/bin"
+export PATH="$PATH:/home/b1n/.local/bin"
 
 export EZA_CONFIG_DIR="$HOME/.config/eza"
 export RZ_RCFILE="$HOME/.config/rizin/rizinrc"
