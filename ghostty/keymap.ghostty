@@ -15,5 +15,5 @@ keybind = super+shift+u=goto_split:up
 keybind = super+shift+e=goto_split:down
 keybind = super+shift+n=goto_split:left
 keybind = super+shift+i=goto_split:right
-keybind = super+d=close_surface
+keybind = super+k=close_surface
 keybind = ctrl+i=csi:105;5u
