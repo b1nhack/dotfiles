@@ -33,5 +33,10 @@ source $ZDOTDIR/plugins/zsh-history-substring-search/zsh-history-substring-searc
 source $ZDOTDIR/.aliasrc
 source $ZDOTDIR/.bindkeyrc
 
+# Called whenever you change dirs, to give you a chance to write the new dir to file.
+# NOTE: If you override the function above, then you are *required* to override this one, too. Can
+# be left empty, though.
+chpwd_recent_dirs() { }
+
 unset HISTFILE
 eval "$(starship init zsh)"
