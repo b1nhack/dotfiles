@@ -8,6 +8,8 @@ eza/theme.yml
 nvim/
 
 .gsd-keyboard.settings-ported
+QtProject.conf
+VirtualBox/
 autostart/
 dconf/
 evolution/
