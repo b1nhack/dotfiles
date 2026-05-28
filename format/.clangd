@@ -1,0 +1,7 @@
+CompileFlags:
+  Add: -ferror-limit=0
+  Remove: [-mpreferred-stack-boundary=*, -mindirect-branch=thunk-extern, -mindirect-branch-register, -fno-allow-store-data-races, -fconserve-stack]
+
+Diagnostics:
+  ClangTidy:
+    Remove: bugprone-sizeof-expression
