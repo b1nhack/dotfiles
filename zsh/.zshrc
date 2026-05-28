@@ -26,9 +26,11 @@ stty werase undef
 stty lnext undef
 stty discard undef
 
+source $ZDOTDIR/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $ZDOTDIR/plugins/zsh-autopair/autopair.zsh
+autopair-init
 source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
 source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source $ZDOTDIR/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 source $ZDOTDIR/.aliasrc
 source $ZDOTDIR/.bindkeyrc

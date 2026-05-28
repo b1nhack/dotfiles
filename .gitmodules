@@ -22,3 +22,6 @@
 [submodule "pwndbg/libslub"]
 	path = pwndbg/libslub
 	url = https://github.com/nccgroup/libslub.git
+[submodule "zsh/plugins/zsh-autopair"]
+	path = zsh/plugins/zsh-autopair
+	url = https://github.com/hlissner/zsh-autopair.git
