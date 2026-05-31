@@ -33,9 +33,6 @@
 [diff]
 	colorMoved = default
 
-[credential]
-	helper = osxkeychain
-
 [alias]
 	logs = log --pretty=oneline --graph
 	vcommit = commit -v
