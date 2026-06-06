@@ -37,7 +37,11 @@ M.setup = function(config)
     { key = 'n', mods = 'SUPER', action = act.SpawnWindow },
 
     -- clipboard
-    { key = 'C', mods = 'CTRL|SHIFT', action = act.CopyTo 'Clipboard' },
+    {
+      key = 'C',
+      mods = 'CTRL|SHIFT',
+      action = act.Multiple { act.CopyTo('Clipboard'), act.ClearSelection },
+    },
     { key = 'V', mods = 'CTRL|SHIFT', action = act.PasteFrom 'Clipboard' },
 
     -- quick select
@@ -68,7 +72,7 @@ M.setup = function(config)
       {
         key = 'Escape',
         mods = 'NONE',
-        action = act.Multiple { 'ScrollToBottom', { CopyMode = 'Close' } },
+        action = act.Multiple { act.ScrollToBottom, act.ClearSelection, act.CopyMode 'Close' },
       },
       { key = 'h', mods = 'NONE', action = act.CopyMode 'MoveForwardWordEnd' },
       { key = 'b', mods = 'NONE', action = act.CopyMode 'MoveBackwardWord' },
@@ -92,8 +96,10 @@ M.setup = function(config)
         key = 'y',
         mods = 'NONE',
         action = act.Multiple {
-          { CopyTo = 'ClipboardAndPrimarySelection' },
-          { Multiple = { 'ScrollToBottom', { CopyMode = 'Close' } } },
+          act.CopyTo 'ClipboardAndPrimarySelection',
+          act.ScrollToBottom,
+          act.ClearSelection,
+          act.CopyMode 'Close',
         },
       },
     },
