@@ -44,7 +44,6 @@ config.harfbuzz_features = {
 
 -- visual
 config.color_scheme = 'Tokyo Night Moon'
-config.default_cursor_style = 'SteadyBar'
 config.audible_bell = 'Disabled'
 
 -- keyboard
