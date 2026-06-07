@@ -38,7 +38,11 @@ function M.setup(config)
     { key = 'k', mods = 'SUPER', action = act.CloseCurrentPane { confirm = true } },
 
     -- tab
-    { key = 't', mods = 'SUPER', action = act.SpawnTab('CurrentPaneDomain') },
+    {
+      key = 't',
+      mods = 'SUPER',
+      action = act.SpawnCommandInNewTab { domain = 'CurrentPaneDomain', cwd = '~' },
+    },
 
     { key = '[', mods = 'ALT', action = act.ActivateTabRelativeNoWrap(-1) },
     { key = ']', mods = 'ALT', action = act.ActivateTabRelativeNoWrap(1) },
