@@ -55,7 +55,15 @@ M.setup = function(config)
     -- misc
     { key = 'f', mods = 'SUPER', action = act.Search { CaseSensitiveString = '' } },
     { key = 'L', mods = 'CTRL|SHIFT', action = act.ShowDebugOverlay },
-    { key = 'r', mods = 'SUPER', action = act.SendKey { key = 'l', mods = 'CTRL' } },
+    {
+      key = 'r',
+      mods = 'SUPER',
+      action = act.Multiple {
+        -- when in viewport, sendKey not working
+        act.ScrollToBottom,
+        act.SendKey { key = 'l', mods = 'CTRL' },
+      },
+    },
 
     -- fix zsh C-i
     { key = 'i', mods = 'CTRL', action = act.SendString('\x1b[105;5u') },
