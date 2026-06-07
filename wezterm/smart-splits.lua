@@ -3,6 +3,7 @@ local smart_splits = wezterm.plugin.require('https://github.com/mrjones2014/smar
 
 local M = {}
 
+---@param config Config
 M.setup = function(config)
   smart_splits.apply_to_config(config, {
     -- the default config is here, if you'd like to use the default keys,

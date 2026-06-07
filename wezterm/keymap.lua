@@ -1,7 +1,9 @@
-local act = require('wezterm').action
+local wezterm = require('wezterm')
+local act = wezterm.action
 
 local M = {}
 
+---@param config Config
 M.setup = function(config)
   config.disable_default_key_bindings = true
   config.keys = {

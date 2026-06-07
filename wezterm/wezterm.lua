@@ -2,6 +2,7 @@ local wezterm = require('wezterm')
 local keymap = require('keymap')
 local smart_splits = require('smart-splits')
 
+---@type Config
 local config = {}
 
 -- window
