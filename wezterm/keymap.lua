@@ -1,10 +1,21 @@
-local wezterm = require('wezterm')
-local act = wezterm.action
-
 local M = {}
 
+local wezterm = require('wezterm')
+local act = wezterm.action
+local utils = require('utils')
+
+M.is_copy_mode_select_mode = {}
+
+local function enter_copy_mode_select_mode(mode)
+  return wezterm.action_callback(function(window, pane)
+    window:perform_action(act.CopyMode { SetSelectionMode = mode }, pane)
+    M.is_copy_mode_select_mode[pane:pane_id()] = true
+    utils.set_visual(window)
+  end)
+end
+
 ---@param config Config
-M.setup = function(config)
+function M.setup(config)
   config.disable_default_key_bindings = true
   config.keys = {
     -- panel
@@ -82,7 +93,22 @@ M.setup = function(config)
       {
         key = 'Escape',
         mods = 'NONE',
-        action = act.Multiple { act.ScrollToBottom, act.ClearSelection, act.CopyMode('Close') },
+        action = wezterm.action_callback(function(window, pane)
+          local pane_id = pane:pane_id()
+          if M.is_copy_mode_select_mode[pane_id] then
+            window:perform_action(
+              act.Multiple { act.ClearSelection, act.CopyMode('ClearSelectionMode') },
+              pane
+            )
+            M.is_copy_mode_select_mode[pane_id] = false
+            utils.set_normal(window)
+          else
+            window:perform_action(
+              act.Multiple { act.ScrollToBottom, act.ClearSelection, act.CopyMode('Close') },
+              pane
+            )
+          end
+        end),
       },
       { key = 'h', mods = 'NONE', action = act.CopyMode('MoveForwardWordEnd') },
       { key = 'b', mods = 'NONE', action = act.CopyMode('MoveBackwardWord') },
@@ -126,9 +152,21 @@ M.setup = function(config)
       { key = 'i', mods = 'NONE', action = act.CopyMode('MoveRight') },
 
       -- select mode
-      { key = 'v', mods = 'NONE', action = act.CopyMode { SetSelectionMode = 'Cell' } },
-      { key = 'v', mods = 'CTRL', action = act.CopyMode { SetSelectionMode = 'Block' } },
-      { key = 'V', mods = 'SHIFT', action = act.CopyMode { SetSelectionMode = 'Line' } },
+      {
+        key = 'v',
+        mods = 'NONE',
+        action = enter_copy_mode_select_mode('Cell'),
+      },
+      {
+        key = 'v',
+        mods = 'CTRL',
+        action = enter_copy_mode_select_mode('Block'),
+      },
+      {
+        key = 'V',
+        mods = 'SHIFT',
+        action = enter_copy_mode_select_mode('Line'),
+      },
 
       {
         key = 'y',

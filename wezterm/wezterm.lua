@@ -1,5 +1,6 @@
 local wezterm = require('wezterm')
 local keymap = require('keymap')
+local utils = require('utils')
 local smart_splits = require('smart-splits')
 
 ---@type Config
@@ -17,7 +18,6 @@ config.window_frame = {
 }
 
 -- tab bar
-config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 config.show_new_tab_button_in_tab_bar = false
 config.show_close_tab_button_in_tabs = false
@@ -51,6 +51,14 @@ config.quote_dropped_files = 'Posix'
 wezterm.on('gui-startup', function(cmd)
   local _, _, window = wezterm.mux.spawn_window(cmd or {})
   window:gui_window():toggle_fullscreen()
+end)
+
+wezterm.on('update-status', function(window, pane)
+  if keymap.is_copy_mode_select_mode[pane:pane_id()] then
+    utils.set_visual(window)
+  else
+    utils.set_normal(window)
+  end
 end)
 
 keymap.setup(config)
