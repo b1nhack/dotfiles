@@ -28,20 +28,6 @@ config.integrated_title_button_style = 'Gnome'
 config.font = wezterm.font('Monaspace Neon')
 config.font_size = 13.0
 config.line_height = 1.2
-config.harfbuzz_features = {
-  'calt=0',
-  'ss01=0',
-  'ss02=0',
-  'ss03=0',
-  'ss04=0',
-  'ss05=0',
-  'ss06=0',
-  'ss07=0',
-  'ss08=0',
-  'ss09=0',
-  'ss10=0',
-  'liga=0',
-}
 
 -- visual
 config.color_scheme = 'Tokyo Night Moon'
