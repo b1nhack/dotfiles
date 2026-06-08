@@ -32,6 +32,7 @@ config.line_height = 1.2
 -- visual
 config.color_scheme = 'Tokyo Night Moon'
 config.audible_bell = 'Disabled'
+config.underline_position = '-2pt'
 
 -- keyboard
 config.allow_win32_input_mode = false
