@@ -10,7 +10,6 @@ alias ll="eza -lh --icons --group-directories-first"
 alias m="neomutt"
 alias n="fastfetch"
 alias v="nvim"
-alias s="wezterm ssh"
 
 alias ga="git add"
 alias gd="git diff"
