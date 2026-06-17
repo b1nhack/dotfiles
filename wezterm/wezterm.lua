@@ -7,12 +7,18 @@ local smart_splits = require('smart-splits')
 local config = {}
 
 -- window
+config.window_content_alignment = {
+  horizontal = 'Center',
+  vertical = 'Center',
+}
+
 config.window_padding = {
   left = 0,
   right = 0,
   top = 0,
   bottom = 0,
 }
+
 config.window_frame = {
   font = wezterm.font('Monaspace Neon'),
 }
