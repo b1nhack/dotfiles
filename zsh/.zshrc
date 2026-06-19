@@ -35,6 +35,12 @@ source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $ZDOTDIR/.aliasrc
 source $ZDOTDIR/.bindkeyrc
 
+# make only complete files
+_make_files_only() {
+	_files
+}
+compdef _make_files_only make gmake gnumake pmake bmake
+
 # Called whenever you change dirs, to give you a chance to write the new dir to file.
 # NOTE: If you override the function above, then you are *required* to override this one, too. Can
 # be left empty, though.
