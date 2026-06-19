@@ -18,6 +18,8 @@ export RUSTUP_AUTO_INSTALL=0
 
 export GNUPGHOME="$HOME/.local/share/gnupg"
 
+export CODEX_HOME="$HOME/.local/share/codex"
+
 export EDITOR="nvim"
 export LESSHISTFILE="-"
 export MANPAGER="nvim +Man!"
