@@ -10,9 +10,6 @@
 [submodule "delta/delta"]
 	path = delta/delta
 	url = https://github.com/catppuccin/delta.git
-[submodule "zsh/plugins/zsh-autocomplete"]
-	path = zsh/plugins/zsh-autocomplete
-	url = https://github.com/marlonrichert/zsh-autocomplete.git
 [submodule "zsh/plugins/zsh-history-substring-search"]
 	path = zsh/plugins/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
@@ -25,3 +22,6 @@
 [submodule "zsh/plugins/zsh-autopair"]
 	path = zsh/plugins/zsh-autopair
 	url = https://github.com/hlissner/zsh-autopair.git
+[submodule "zsh/plugins/zsh-autocomplete"]
+	path = zsh/plugins/zsh-autocomplete
+	url = https://github.com/b1nhack/zsh-autocomplete.git
