@@ -25,7 +25,6 @@ set message_cache_dir = "~/.cache/neomutt/"
 set news_cache_dir = "~/.cache/neomutt/news/"
 set signature = "~/.config/signature"
 
-set crypt_auto_sign = yes
 set crypt_opportunistic_encrypt = yes
 set crypt_opportunistic_encrypt_strong_keys = yes
 set crypt_use_pka = yes
