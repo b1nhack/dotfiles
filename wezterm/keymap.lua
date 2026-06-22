@@ -173,7 +173,7 @@ function M.setup(config)
       },
 
       {
-        key = 'y',
+        key = 'Y',
         mods = 'NONE',
         action = act.Multiple {
           act.CopyTo('ClipboardAndPrimarySelection'),
