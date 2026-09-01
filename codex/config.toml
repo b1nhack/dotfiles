@@ -2,7 +2,6 @@
 theme = "catppuccin-macchiato"
 pet = "dewey"
 terminal_title = []
-animations = false
 show_tooltips = false
 status_line = ["model-with-reasoning", "current-dir", "permissions", "approval-mode", "context-remaining", "five-hour-limit", "weekly-limit", "used-tokens"]
 
