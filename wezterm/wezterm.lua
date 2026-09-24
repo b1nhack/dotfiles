@@ -31,7 +31,7 @@ config.show_tab_index_in_tab_bar = false
 config.integrated_title_button_style = 'Gnome'
 
 -- font
-config.font = wezterm.font('Monaspace Neon')
+config.font = wezterm.font('MonaspiceNe NF')
 config.font_size = 13.0
 config.line_height = 1.2
 
