@@ -19,3 +19,4 @@ enabled = false
 
 [features]
 prevent_idle_sleep = true
+memories = true
