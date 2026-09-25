@@ -1,0 +1,7 @@
+{
+  "id": "doraemon",
+  "displayName": "哆啦A梦",
+  "description": "陪伴工作的蓝色机器猫，会待机、挥手、跳跃和认真检查。",
+  "spriteVersionNumber": 1,
+  "spritesheetPath": "spritesheet.png"
+}
