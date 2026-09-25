@@ -16,3 +16,6 @@ enabled = false
 
 [feedback]
 enabled = false
+
+[features]
+prevent_idle_sleep = true
