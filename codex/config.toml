@@ -1,10 +1,18 @@
+personality = "pragmatic"
+
 [tui]
 theme = "catppuccin-macchiato"
-pet = "dewey"
+pet = "custom:doraemon"
 terminal_title = []
 show_tooltips = false
 status_line = ["model-with-reasoning", "current-dir", "permissions", "approval-mode", "context-remaining", "five-hour-limit", "weekly-limit", "used-tokens", "run-state"]
+status_line_use_colors = true
 
-history.persistence = "none"
-analytics.enabled = false
-feedback.enabled = false
+[history]
+persistence = "none"
+
+[analytics]
+enabled = false
+
+[feedback]
+enabled = false
