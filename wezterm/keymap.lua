@@ -24,16 +24,6 @@ function M.setup(config)
     { key = 'n', mods = 'SUPER', action = act.SplitPane { direction = 'Left' } },
     { key = 'i', mods = 'SUPER', action = act.SplitPane { direction = 'Right' } },
 
-    { key = 'u', mods = 'ALT', action = act.ActivatePaneDirection('Up') },
-    { key = 'e', mods = 'ALT', action = act.ActivatePaneDirection('Down') },
-    { key = 'n', mods = 'ALT', action = act.ActivatePaneDirection('Left') },
-    { key = 'i', mods = 'ALT', action = act.ActivatePaneDirection('Right') },
-
-    { key = 'UpArrow', mods = 'SHIFT', action = act.AdjustPaneSize { 'Up', 3 } },
-    { key = 'DownArrow', mods = 'SHIFT', action = act.AdjustPaneSize { 'Down', 3 } },
-    { key = 'LeftArrow', mods = 'SHIFT', action = act.AdjustPaneSize { 'Left', 3 } },
-    { key = 'RightArrow', mods = 'SHIFT', action = act.AdjustPaneSize { 'Right', 3 } },
-
     { key = 'Enter', mods = 'ALT', action = act.TogglePaneZoomState },
     { key = 'k', mods = 'SUPER', action = act.CloseCurrentPane { confirm = true } },
 

@@ -1,28 +1,40 @@
 local M = {}
 
 local wezterm = require('wezterm')
-local smart_splits = wezterm.plugin.require('https://github.com/mrjones2014/smart-splits.nvim')
+local smart_splits = wezterm.plugin.require('https://github.com/smart-splits-nvim/backend-wezterm')
 
 ---@param config Config
 function M.setup(config)
   smart_splits.apply_to_config(config, {
-    -- the default config is here, if you'd like to use the default keys,
-    -- you can omit this configuration table parameter and just use
-    -- smart_splits.apply_to_config(config)
+    -- the default config is shown here; omit the table entirely to use it as-is
 
-    -- if you want to use separate direction keys for move vs. resize, you
-    -- can also do this:
+    -- directional keys, in order of: left, down, up, right
+    -- direction_keys = { 'h', 'j', 'k', 'l' },
+    -- move/resize can also be configured separately, e.g.:
     direction_keys = {
       move = { 'n', 'e', 'u', 'i' },
       resize = { 'LeftArrow', 'DownArrow', 'UpArrow', 'RightArrow' },
     },
-    -- modifier keys to combine with direction_keys
+
     modifiers = {
-      move = 'ALT', -- modifier to use for pane movement, e.g. CTRL+h to move left
-      resize = 'SHIFT', -- modifier to use for pane resize, e.g. META+h to resize to the left
+      move = 'ALT', -- e.g. CTRL+h to move left
+      resize = 'SHIFT', -- e.g. META+h to resize left
     },
-    -- log level to use: info, warn, error
-    log_level = 'info',
+
+    -- what happens when there's no WezTerm pane in that direction: both a *direct* keypress in a
+    -- pane not running Neovim, and a request from Neovim reporting it hit its own edge, resolve
+    -- through this same option — smart-splits.nvim's own `move.at_edge` config has no effect here:
+    --   'stop'  -- pass the keystroke through to the program in the pane (default)
+    --   'wrap'  -- activate the farthest pane in the opposite direction
+    --   'split' -- split the current pane in that direction
+    --   function(ctx) ... end -- decide yourself; see below
+    at_edge = 'stop',
+
+    -- block navigation (both a direct keypress and a request from Neovim) while the current pane
+    -- is zoomed in
+    block_nav_on_zoom = true,
+
+    log_level = 'info', -- 'error' | 'warn' | 'info'
   })
 end
 
