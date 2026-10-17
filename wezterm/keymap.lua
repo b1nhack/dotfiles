@@ -4,12 +4,45 @@ local wezterm = require('wezterm')
 local act = wezterm.action
 local utils = require('utils')
 
-M.is_copy_mode_select_mode = {}
+local is_select_mode = {}
+
+-- prune closed pane
+local function prune_select_mode()
+  if next(is_select_mode) == nil then
+    return
+  end
+  local live = {}
+  for _, w in ipairs(wezterm.mux.all_windows()) do
+    for _, tab in ipairs(w:tabs()) do
+      for _, pane in ipairs(tab:panes()) do
+        live[pane:pane_id()] = true
+      end
+    end
+  end
+  for pane_id in pairs(is_select_mode) do
+    if not live[pane_id] then
+      is_select_mode[pane_id] = nil
+    end
+  end
+end
+
+---@param window Window
+---@param pane Pane
+---@return boolean
+function M.is_visual(window, pane)
+  local pane_id = pane:pane_id()
+  if window:active_key_table() ~= 'copy_mode' then
+    is_select_mode[pane_id] = nil
+    prune_select_mode()
+    return false
+  end
+  return is_select_mode[pane_id] == true
+end
 
 local function enter_copy_mode_select_mode(mode)
   return wezterm.action_callback(function(window, pane)
     window:perform_action(act.CopyMode { SetSelectionMode = mode }, pane)
-    M.is_copy_mode_select_mode[pane:pane_id()] = true
+    is_select_mode[pane:pane_id()] = true
     utils.set_visual(window)
   end)
 end
@@ -84,22 +117,7 @@ function M.setup(config)
       {
         key = 'Escape',
         mods = 'NONE',
-        action = wezterm.action_callback(function(window, pane)
-          local pane_id = pane:pane_id()
-          if M.is_copy_mode_select_mode[pane_id] then
-            window:perform_action(
-              act.Multiple { act.ClearSelection, act.CopyMode('ClearSelectionMode') },
-              pane
-            )
-            M.is_copy_mode_select_mode[pane_id] = false
-            utils.set_normal(window)
-          else
-            window:perform_action(
-              act.Multiple { act.ScrollToBottom, act.ClearSelection, act.CopyMode('Close') },
-              pane
-            )
-          end
-        end),
+        action = act.Multiple { act.ScrollToBottom, act.ClearSelection, act.CopyMode('Close') },
       },
       { key = 'h', mods = 'NONE', action = act.CopyMode('MoveForwardWordEnd') },
       { key = 'b', mods = 'NONE', action = act.CopyMode('MoveBackwardWord') },
@@ -164,6 +182,16 @@ function M.setup(config)
         mods = 'NONE',
         action = act.Multiple {
           act.CopyTo('ClipboardAndPrimarySelection'),
+          act.ScrollToBottom,
+          act.ClearSelection,
+          act.CopyMode('Close'),
+        },
+      },
+      {
+        key = 'C',
+        mods = 'CTRL|SHIFT',
+        action = act.Multiple {
+          act.CopyTo('Clipboard'),
           act.ScrollToBottom,
           act.ClearSelection,
           act.CopyMode('Close'),

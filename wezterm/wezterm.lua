@@ -60,7 +60,7 @@ wezterm.on('gui-startup', function(cmd)
 end)
 
 wezterm.on('update-status', function(window, pane)
-  if keymap.is_copy_mode_select_mode[pane:pane_id()] then
+  if keymap.is_visual(window, pane) then
     utils.set_visual(window)
   else
     utils.set_normal(window)
