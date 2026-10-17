@@ -44,7 +44,6 @@ config.audible_bell = 'Disabled'
 config.underline_position = '-2pt'
 
 -- mouse
-config.disable_default_mouse_bindings = false
 config.mouse_wheel_scrolls_tabs = false
 
 -- quick select
