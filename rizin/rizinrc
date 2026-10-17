@@ -6,3 +6,5 @@ e scr.utf8.curvy=true
 e cfg.fortunes=false
 
 e cmd.repeat=true
+
+e scr.histsave=false
