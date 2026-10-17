@@ -43,9 +43,6 @@ config.color_scheme = 'Tokyo Night Moon'
 config.audible_bell = 'Disabled'
 config.underline_position = '-2pt'
 
--- keyboard
-config.allow_win32_input_mode = false
-
 -- mouse
 config.disable_default_mouse_bindings = false
 config.mouse_wheel_scrolls_tabs = false
