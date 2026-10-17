@@ -50,9 +50,6 @@ function M.setup(config)
     { key = '{', mods = 'ALT|SHIFT', action = act.MoveTabRelative(-1) },
     { key = '}', mods = 'ALT|SHIFT', action = act.MoveTabRelative(1) },
 
-    --window
-    { key = 'n', mods = 'SUPER', action = act.SpawnWindow },
-
     -- clipboard
     {
       key = 'C',
