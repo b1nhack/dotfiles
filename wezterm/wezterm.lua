@@ -20,7 +20,7 @@ config.window_padding = {
 }
 
 config.window_frame = {
-  font = wezterm.font('Monaspace Neon'),
+  font = wezterm.font('MonaspiceNe NF'),
 }
 
 -- tab bar
