@@ -22,3 +22,6 @@
 [submodule "zsh/plugins/zsh-autocomplete"]
 	path = zsh/plugins/zsh-autocomplete
 	url = https://github.com/b1nhack/zsh-autocomplete.git
+[submodule "ibus/rime"]
+	path = ibus/rime
+	url = https://github.com/iDvel/rime-ice.git
