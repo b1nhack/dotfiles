@@ -39,7 +39,7 @@ config.font_size = 13.0
 config.line_height = 1.2
 
 -- visual
-config.color_scheme = 'Tokyo Night Moon'
+config.color_scheme = 'Tokyo Night Storm'
 config.audible_bell = 'Disabled'
 config.underline_position = '-2pt'
 
