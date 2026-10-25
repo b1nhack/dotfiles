@@ -4,8 +4,8 @@ SRC_DIR		:= src
 BUILD_DIR	:= build
 
 CC		:= musl-gcc
-CPPFLAGS	:=
-CFLAGS		:= -std=gnu11 -Wall -Wextra -O2
+CPPFLAGS	:= -D_GNU_SOURCE
+CFLAGS		:= -std=gnu11 -Wall -Wextra -O2 -fno-strict-aliasing -march=x86-64
 LDFLAGS		:= -static
 LDLIBS		:=
 
