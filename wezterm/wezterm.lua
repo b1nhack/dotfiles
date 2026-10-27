@@ -20,7 +20,10 @@ config.window_padding = {
 }
 
 config.window_frame = {
-  font = wezterm.font('MonaspiceNe NF'),
+  font = wezterm.font_with_fallback({
+    'MonaspiceNe NF',
+    'Noto Sans Mono CJK SC',
+  }),
 }
 
 -- tab bar
