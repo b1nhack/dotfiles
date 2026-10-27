@@ -31,10 +31,6 @@
         "notifications": false
     },
     "highlights": false,
-    "terminal": {
-        "title": false,
-        "copy": "manual"
-    },
     "mini": {
         "thinking": "hide",
         "tools": "hide",
