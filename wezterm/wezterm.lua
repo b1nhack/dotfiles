@@ -57,6 +57,26 @@ config.quick_select_remove_styling = true
 config.canonicalize_pasted_newlines = 'LineFeed'
 config.quote_dropped_files = 'Posix'
 
+-- some programs (e.g. opencode) clear the title via OSC on exit, which
+-- collapses the tab to zero width; fall back to the foreground process name
+wezterm.on('format-tab-title', function(tab)
+  local title = tab.tab_title
+  if not title or #title == 0 then
+    title = tab.active_pane.title
+  end
+  if not title or #title == 0 then
+    local ok, info = pcall(function()
+      return wezterm.mux.get_pane(tab.active_pane.pane_id):get_foreground_process_info()
+    end)
+    if ok and info and info.name and #info.name > 0 then
+      title = info.name
+    else
+      title = 'shell'
+    end
+  end
+  return title
+end)
+
 wezterm.on('gui-startup', function(cmd)
   local _, _, window = wezterm.mux.spawn_window(cmd or {})
   window:gui_window():toggle_fullscreen()
