@@ -9,20 +9,21 @@ nvim/
 
 .gsd-keyboard.settings-ported
 QtProject.conf
-VirtualBox/
-ZCode/
 autostart/
 dconf/
 evolution/
+gnome-boxes/
 gnome-initial-setup-done
 gtk-3.0/
 ibus/bus/
 ibus/libpinyin/
 libreoffice/
+libvirt/
 mihomo-party/
 mimeapps.list
 monitors.xml
 mozilla/
+opencode/service.json
 org.gnome.Ptyxis/
 pulse/
 systemd/
