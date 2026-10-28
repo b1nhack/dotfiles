@@ -7,3 +7,4 @@ path = ../tokyonight.nvim/extras/delta/tokyonight_night.gitconfig
 navigate = true
 hyperlinks = true
 side-by-side = true
+syntax-theme = tokyonight_night
