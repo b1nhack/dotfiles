@@ -2,7 +2,11 @@
   "$schema": "https://opencode.ai/config.json",
   "permissions": [
     { "action": "read", "resource": "*", "effect": "allow" },
+    { "action": "read", "resource": "../*", "effect": "ask" },
+
     { "action": "edit", "resource": "*", "effect": "allow" },
+    { "action": "edit", "resource": "../*", "effect": "ask" },
+    { "action": "edit", "resource": "*/.git/*", "effect": "deny" },
     { "action": "edit", "resource": ".git/*", "effect": "deny" },
 
     { "action": "glob", "resource": "*", "effect": "allow" },
