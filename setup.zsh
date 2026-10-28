@@ -1,8 +1,8 @@
 #!/bin/zsh
 
 mkdir -p ~/.config/fsh
-ln -sf ~/.config/zsh/plugins/zsh-fsh/themes/catppuccin-macchiato.ini ~/.config/fsh/catppuccin-macchiato.ini
-# fast-theme XDG:catppuccin-macchiato
+ln -sf ~/.config/zsh/plugins/tokyonight.zsh-fsh/themes/tokyonight-night.ini ~/.config/fsh/tokyonight-night.ini
+# fast-theme XDG:tokyonight-night
 
 ln -sf ~/.config/bat/themes/bat/themes/Catppuccin\ Macchiato.tmTheme ~/.config/bat/themes/Catppuccin\ Macchiato.tmTheme
 bat cache --build
