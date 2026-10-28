@@ -23,3 +23,7 @@
   ```
 
 - One-shot CLI tools: `uvx <tool>` (Python), `npx <tool>` (Node), `podman run --rm` (containers).
+
+## Code comments
+
+- Write all code comments in American English only. Do not use other languages or regional spelling variants (e.g., prefer "color" over "colour", "initialize" over "initialise").
