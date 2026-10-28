@@ -58,24 +58,43 @@ config.canonicalize_pasted_newlines = 'LineFeed'
 config.quote_dropped_files = 'Posix'
 config.term = 'xterm-direct'
 
--- some programs (e.g. opencode) clear the title via OSC on exit, which
--- collapses the tab to zero width; fall back to the foreground process name
+-- Programs leave the OSC title behind on exit (neomutt) or clear it
+-- (opencode), so the pane title is only meaningful while that program is
+-- the foreground process. When the shell is in the foreground, show the
+-- shell name instead; otherwise show the program's own title, falling
+-- back to its process name.
+local SHELL_NAMES = {
+  zsh = true,
+  bash = true,
+  fish = true,
+  sh = true,
+  dash = true,
+  ksh = true,
+  tcsh = true,
+}
+
 wezterm.on('format-tab-title', function(tab)
-  local title = tab.tab_title
-  if not title or #title == 0 then
-    title = tab.active_pane.title
+  local pane = tab.active_pane
+
+  -- an explicitly set tab title always wins
+  if tab.tab_title and #tab.tab_title > 0 then
+    return tab.tab_title
   end
-  if not title or #title == 0 then
-    local ok, info = pcall(function()
-      return wezterm.mux.get_pane(tab.active_pane.pane_id):get_foreground_process_info()
-    end)
-    if ok and info and info.name and #info.name > 0 then
-      title = info.name
-    else
-      title = 'shell'
-    end
+
+  local ok, info = pcall(function()
+    return wezterm.mux.get_pane(pane.pane_id):get_foreground_process_info()
+  end)
+  local fg_name = (ok and info and info.name) or ''
+
+  if SHELL_NAMES[fg_name] then
+    -- at the prompt: any OSC title here is stale, show the shell name
+    return fg_name
   end
-  return title
+  if pane.title and #pane.title > 0 then
+    -- a program is in the foreground: trust its own title
+    return pane.title
+  end
+  return (fg_name ~= '' and fg_name) or 'shell'
 end)
 
 wezterm.on('gui-startup', function(cmd)
