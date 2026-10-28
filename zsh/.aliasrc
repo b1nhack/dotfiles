@@ -10,7 +10,7 @@ alias ll="eza -lh --icons --group-directories-first"
 alias m="neomutt"
 alias n="fastfetch"
 alias v="nvim"
-alias spy="source ~/.venv/bin/activate"
+alias spy="source ~/.config/blog-python/.venv/bin/activate"
 
 alias ga="git add"
 alias gd="git diff"
