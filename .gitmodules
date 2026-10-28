@@ -22,3 +22,6 @@
 [submodule "tokyonight.nvim"]
 	path = tokyonight.nvim
 	url = https://github.com/folke/tokyonight.nvim
+[submodule "neomutt/tokyonight.neomutt"]
+	path = neomutt/tokyonight.neomutt
+	url = https://github.com/b1nhack/tokyonight.neomutt

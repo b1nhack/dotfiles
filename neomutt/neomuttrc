@@ -2,5 +2,5 @@
 
 source ~/.config/neomutt/core.neomuttrc
 source ~/.config/neomutt/keymap.neomuttrc
-source ~/.config/neomutt/catppuccin.neomuttrc
 source ~/.config/neomutt/aliases.neomuttrc
+source ~/.config/neomutt/tokyonight.neomutt/themes/truecolor/tokyonight-night.neomuttrc
