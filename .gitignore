@@ -10,6 +10,7 @@ nvim/
 .gsd-keyboard.settings-ported
 QtProject.conf
 autostart/
+blog-python/.venv/
 dconf/
 evolution/
 gnome-boxes/
