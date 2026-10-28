@@ -1,65 +1,82 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
+palette = 'tokyonight-night'
+
 format = """
-[ ](color_orange)\
+[░▒▓](blue)\
 $os\
-$username\
-[](bg:color_yellow fg:color_orange)\
+[](bg:blue fg:blue)\
 $directory\
-[](fg:color_yellow bg:color_aqua)\
+[](fg:blue bg:blue0)\
 $git_branch\
 $git_status\
-[](fg:color_aqua bg:color_blue)\
-$c\
+[](fg:blue0 bg:bg_highlight)\
+$nodejs\
+$bun\
 $rust\
 $golang\
-$nodejs\
 $php\
-$java\
-$kotlin\
-$haskell\
-$python\
-[](fg:color_blue bg:color_bg3)\
-$docker_context\
-$conda\
-[](fg:color_bg3 bg:color_bg1)\
+[](fg:bg_highlight bg:bg_dark)\
 $time\
-[ ](fg:color_bg1)\
-$line_break$character"""
+[ ](fg:bg_dark)\
+\n$character"""
 
-palette = "catppuccin_macchiato"
+[directory]
+style = "fg:bg bg:blue"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
 
-[palettes.catppuccin_macchiato]
-rosewater = "#f4dbd6"
-flamingo = "#f0c6c6"
-pink = "#f5bde6"
-mauve = "#c6a0f6"
-red = "#ed8796"
-maroon = "#ee99a0"
-peach = "#f5a97f"
-yellow = "#eed49f"
-green = "#a6da95"
-teal = "#8bd5ca"
-sky = "#91d7e3"
-sapphire = "#7dc4e4"
-blue = "#8aadf4"
-lavender = "#b7bdf8"
-text = "#cad3f5"
-subtext1 = "#b8c0e0"
-subtext0 = "#a5adcb"
-overlay2 = "#939ab7"
-overlay1 = "#8087a2"
-overlay0 = "#6e738d"
-surface2 = "#5b6078"
-surface1 = "#494d64"
-surface0 = "#363a4f"
-base = "#24273a"
-mantle = "#1e2030"
-crust = "#181926"
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:blue0"
+format = '[[ $symbol $branch ](fg:blue bg:blue0)]($style)'
+
+[git_status]
+style = "bg:blue0"
+format = '[[($all_status$ahead_behind )](fg:blue bg:blue0)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:bg_highlight"
+format = '[[ $symbol ($version) ](fg:blue bg:bg_highlight)]($style)'
+
+[bun]
+symbol = ""
+style = "bg:bg_highlight"
+format = '[[ $symbol ($version) ](fg:blue bg:bg_highlight)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:bg_highlight"
+format = '[[ $symbol ($version) ](fg:blue bg:bg_highlight)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:bg_highlight"
+format = '[[ $symbol ($version) ](fg:blue bg:bg_highlight)]($style)'
+
+[php]
+symbol = ""
+style = "bg:bg_highlight"
+format = '[[ $symbol ($version) ](fg:blue bg:bg_highlight)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:bg_dark"
+format = '[[  $time ](fg:comment bg:bg_dark)]($style)'
 
 [os]
+style = "bg:blue fg:bg"
+format = "[ $symbol ]($style)"
 disabled = false
-style = "bg:color_orange fg:color_fg0"
 
 [os.symbols]
 Windows = "󰍲"
@@ -75,109 +92,53 @@ Fedora = "󰣛"
 Alpine = ""
 Amazon = ""
 Android = ""
+AOSC = ""
 Arch = "󰣇"
 Artix = "󰣇"
+EndeavourOS = ""
 CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
+Pop = ""
 
-[username]
-show_always = true
-style_user = "bg:color_orange fg:color_fg0"
-style_root = "bg:color_orange fg:color_fg0"
-format = '[ $user ]($style)'
+# https://github.com/folke/tokyonight.nvim
+[palettes.tokyonight-night]
+bg_dark = '#16161e'
+bg = '#1a1b26'
+bg_highlight = '#292e42'
+blue0 = '#3d59a1'
+blue = '#7aa2f7'
+fg = '#c0caf5'
+fg_dark = '#a9b1d6'
+comment = '#565f89'
 
-[directory]
-style = "fg:color_fg0 bg:color_yellow"
-format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+[palettes.tokyonight-storm]
+bg_dark = '#1f2335'
+bg = '#24283b'
+bg_highlight = '#292e42'
+blue0 = '#3d59a1'
+blue = '#7aa2f7'
+fg = '#c0caf5'
+fg_dark = '#a9b1d6'
+comment = '#565f89'
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
+[palettes.tokyonight-moon]
+bg_dark = '#1e2030'
+bg = '#222436'
+bg_highlight = '#2f334d'
+blue0 = '#3e68d7'
+blue = '#82aaff'
+fg = '#c8d3f5'
+fg_dark = '#828bb8'
+comment = '#636da6'
 
-[git_branch]
-symbol = ""
-style = "bg:color_aqua"
-format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
-
-[git_status]
-style = "bg:color_aqua"
-format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-
-[c]
-symbol = " "
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-
-[rust]
-symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-
-[golang]
-symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-
-[php]
-symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-
-[java]
-symbol = " "
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-
-[kotlin]
-symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-
-[haskell]
-symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-
-[python]
-symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
-
-[docker_context]
-symbol = ""
-style = "bg:color_bg3"
-format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
-
-[conda]
-style = "bg:color_bg3"
-format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
-
-[time]
-disabled = false
-time_format = "%R"
-style = "bg:color_bg1"
-format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
-
-[line_break]
-disabled = false
-
-[character]
-disabled = false
-success_symbol = '[](bold fg:color_green)'
-error_symbol = '[](bold fg:color_red)'
-vimcmd_symbol = '[](bold fg:color_green)'
-vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
-vimcmd_replace_symbol = '[](bold fg:color_purple)'
-vimcmd_visual_symbol = '[](bold fg:color_yellow)'
+[palettes.tokyonight-day]
+bg_dark = '#d0d5e3'
+bg = '#e1e2e7'
+bg_highlight = '#c4c8da'
+blue0 = '#7890dd'
+blue = '#2e7de9'
+fg = '#3760bf'
+fg_dark = '#6172b0'
+comment = '#848cb5'
