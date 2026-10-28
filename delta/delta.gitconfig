@@ -1,7 +1,7 @@
 # vim: filetype=gitconfig
 
 [include]
-path = ./delta/catppuccin.gitconfig
+path = ../tokyonight.nvim/extras/delta/tokyonight_night.gitconfig
 
 [delta]
 navigate = true
