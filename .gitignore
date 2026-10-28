@@ -1,11 +1,9 @@
 bat/themes/
 eza/theme.yml
 fsh/
-kitty/current-theme.conf
 kitty/get_layout.py
 kitty/pass_keys.py
 nvim/
-zsh/.zcompdump*
 
 .gsd-keyboard.settings-ported
 QtProject.conf
