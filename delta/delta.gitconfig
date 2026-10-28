@@ -5,6 +5,5 @@ path = ../tokyonight.nvim/extras/delta/tokyonight_night.gitconfig
 
 [delta]
 navigate = true
-features = catppuccin-macchiato
 hyperlinks = true
 side-by-side = true
