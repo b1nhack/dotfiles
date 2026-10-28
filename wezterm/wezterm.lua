@@ -56,6 +56,7 @@ config.quick_select_remove_styling = true
 -- misc
 config.canonicalize_pasted_newlines = 'LineFeed'
 config.quote_dropped_files = 'Posix'
+config.term = 'xterm-direct'
 
 -- some programs (e.g. opencode) clear the title via OSC on exit, which
 -- collapses the tab to zero width; fall back to the foreground process name
