@@ -31,6 +31,8 @@ source $ZDOTDIR/plugins/zsh-autopair/autopair.zsh
 autopair-init
 source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
 source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source $ZDOTDIR/plugins/tokyonight.zsh-fsh/extras/zsh-autocomplete/tokyonight-night.zsh
+source $ZDOTDIR/plugins/tokyonight.zsh-fsh/extras/history-substring-search/tokyonight-night.zsh
 
 source $ZDOTDIR/.aliasrc
 source $ZDOTDIR/.bindkeyrc
