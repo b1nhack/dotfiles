@@ -4,7 +4,7 @@ mkdir -p ~/.config/fsh
 ln -sf ~/.config/zsh/plugins/tokyonight.zsh-fsh/themes/tokyonight-night.ini ~/.config/fsh/tokyonight-night.ini
 # fast-theme XDG:tokyonight-night
 
-ln -sf ~/.config/bat/themes/bat/themes/Catppuccin\ Macchiato.tmTheme ~/.config/bat/themes/Catppuccin\ Macchiato.tmTheme
+ln -sf ~/.config/tokyonight.nvim/extras/sublime/tokyonight_night.tmTheme ~/.config/bat/themes/tokyonight_night.tmTheme
 bat cache --build
 
 ln -sf ~/.config/zsh/.zshenv ~/.zshenv

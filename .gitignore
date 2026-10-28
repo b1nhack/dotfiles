@@ -1,11 +1,11 @@
+bat/themes/
+eza/theme.yml
 fsh/
-bat/themes/Catppuccin\ Macchiato.tmTheme
 kitty/current-theme.conf
 kitty/get_layout.py
 kitty/pass_keys.py
-zsh/.zcompdump*
-eza/theme.yml
 nvim/
+zsh/.zcompdump*
 
 .gsd-keyboard.settings-ported
 QtProject.conf

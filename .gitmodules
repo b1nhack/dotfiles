@@ -1,9 +1,6 @@
 [submodule "zsh/plugins/fsh"]
 	path = zsh/plugins/fsh
 	url = https://github.com/zdharma-continuum/fast-syntax-highlighting
-[submodule "bat/themes/bat"]
-	path = bat/themes/bat
-	url = https://github.com/catppuccin/bat.git
 [submodule "delta/delta"]
 	path = delta/delta
 	url = https://github.com/catppuccin/delta.git
@@ -25,3 +22,6 @@
 [submodule "zsh/plugins/tokyonight.zsh-fsh"]
 	path = zsh/plugins/tokyonight.zsh-fsh
 	url = https://github.com/b1nhack/tokyonight.zsh-fsh.git
+[submodule "tokyonight.nvim"]
+	path = tokyonight.nvim
+	url = https://github.com/folke/tokyonight.nvim
