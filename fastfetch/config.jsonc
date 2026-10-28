@@ -49,5 +49,45 @@
 		},
 		"break",
 		"colors",
-	]
+	],
+
+	// ── Tokyo Night: night ──
+	"display": {
+		"color": {
+			"keys": "#7aa2f7",
+			"title": "#c0caf5",
+			"output": "default",
+			"separator": "#565f89"
+		}
+	},
+
+	// ── Tokyo Night: storm ──
+	// "display": {
+	// 	"color": {
+	// 		"keys": "#7aa2f7",
+	// 		"title": "#c0caf5",
+	// 		"output": "default",
+	// 		"separator": "#565f89"
+	// 	}
+	// },
+
+	// ── Tokyo Night: moon ──
+	// "display": {
+	// 	"color": {
+	// 		"keys": "#82aaff",
+	// 		"title": "#c8d3f5",
+	// 		"output": "default",
+	// 		"separator": "#636da6"
+	// 	}
+	// },
+
+	// ── Tokyo Night: day ──
+	// "display": {
+	// 	"color": {
+	// 		"keys": "#2e7de9",
+	// 		"title": "#3760bf",
+	// 		"output": "default",
+	// 		"separator": "#7890dd"
+	// 	}
+	// },
 }
