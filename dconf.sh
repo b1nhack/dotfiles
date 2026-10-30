@@ -125,6 +125,8 @@ for section, items in sections:
             all_default = False
             break
     if not all_default:
+        if out:
+            out.append("")  # blank line between sections, for readability
         out.append("[" + section + "]")
         out.extend(raw for _, _, raw in items)
 
