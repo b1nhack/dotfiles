@@ -57,6 +57,7 @@ config.quick_select_remove_styling = true
 config.canonicalize_pasted_newlines = 'LineFeed'
 config.quote_dropped_files = 'Posix'
 config.term = 'xterm-direct'
+config.enable_kitty_keyboard = true
 
 -- Programs leave the OSC title behind on exit (neomutt) or clear it
 -- (opencode), so the pane title is only meaningful while that program is
