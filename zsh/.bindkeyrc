@@ -63,6 +63,10 @@ bindkey -M vicmd "J" vi-join
 
 # viins
 bindkey -M viins "^N" vi-insert-bol
+# Let Backspace cross the position where insert mode started (viinsbegin).
+# Otherwise e.g. ESC -> A or C-i (vi-add-eol) leaves Backspace unable to
+# delete anything, because insert "began" at the end of the line.
+bindkey -M viins "^?" backward-delete-char
 bindkey -M viins "^[[105;5u" vi-add-eol # Ctrl+i in CSI u, configured in ghostty
 bindkey -M viins "^v" edit-command-line
 bindkey -M viins "^H" history-substring-search-up
@@ -97,3 +101,11 @@ bindkey -M visual "x" vi-delete
 bindkey -M visual "p" put-replace-selection
 bindkey -M visual "d" vi-delete
 bindkey -M visual "c" vi-change
+
+# Deactivate the selection when leaving the visual keymap, e.g. when
+# entering insert mode straight from visual via A/C-i. Otherwise the
+# region stays active (and rendered) until the first character is typed.
+zle-keymap-select() {
+	[[ $KEYMAP != visual ]] && ((REGION_ACTIVE)) && zle .deactivate-region
+}
+zle -N zle-keymap-select
