@@ -52,6 +52,7 @@ source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $ZDOTDIR/plugins/tokyonight.zsh-fsh/extras/zsh-autocomplete/tokyonight-night.zsh
 source $ZDOTDIR/plugins/tokyonight.zsh-fsh/extras/history-substring-search/tokyonight-night.zsh
+source $ZDOTDIR/plugins/tokyonight.zsh-fsh/extras/zsh-vi-mode/tokyonight-night.zsh
 
 source $ZDOTDIR/.aliasrc
 source $ZDOTDIR/.bindkeyrc
