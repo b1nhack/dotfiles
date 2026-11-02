@@ -1,111 +1,472 @@
 #!/bin/zsh
 
-bindkey -v
+# ─── zsh-vi-mode: nvim-flavored keymaps ─────────────────────────────────
+# Reference: ~/.config/nvim/lua/keymap.lua + nvim-surround.lua
+# zvm_config lives in .zshrc (must be defined before the plugin loads).
+# Requires wezterm (`enable_kitty_keyboard = true`) or ghostty, so that
+# C-i arrives as a CSI u sequence instead of a TAB byte.
 
-# Completion
-bindkey "^E" menu-select
-bindkey "^U" menu-select
+# Applied at the end of zvm_init, after the plugin's own bindings, so
+# every binding here wins over plugin/vanilla defaults.
+# Dead keys are bound to `undefined-key` (NOT left unbound): pressing them
+# is a silent no-op (NO_BEEP) while the binding shadows plugin/vanilla
+# defaults that would otherwise resurface.
+function zvm_after_init() {
+  # NOTE: locals are declared exactly once -- a bare `local k` on a
+  # variable that already holds a value prints `k='...'` to the terminal.
+  local km k w s d
+  KEYTIMEOUT=1  # zle-level ambiguity wait (10ms): instant ESC in insert
+                # mode; bound-prefix keys (visual i/y/c/d) fire at once.
+                # Operator chords (d/c/y + motion) are read by the plugin's
+                # own reader, which uses ZVM_KEYTIMEOUT (0.3s) instead.
+  local -a sur=('(' ')' '[' ']' '{' '}' '<' '>' "'" '"' "\`" ' ')
 
-# menuselect
+  # count prefixes: U=9k  E=9j  H=5e  B=5b
+  # (up-line/down-line are no-ops on the first/last line, like nvim k/j)
+  function vm_up_line() {
+    [[ $LBUFFER == *$'\n'* ]] && zle up-line
+  }
+  function vm_down_line() {
+    [[ $RBUFFER == *$'\n'* ]] && zle down-line
+  }
+  function vm_up_line_9()   { repeat 9; do zle vm_up_line;  done; }
+  function vm_down_line_9() { repeat 9; do zle vm_down_line; done; }
+  function vm_word_end_5()  { repeat 5; do zle vi-forward-word-end; done; }
+  function vm_word_back_5() { repeat 5; do zle vi-backward-word;  done; }
+
+  # C-a -> ggVG$ (select whole buffer, like nvim normal/insert C-a)
+  function vm_select_all() {
+    [[ -z $BUFFER ]] && return 0
+    zvm_select_vi_mode $ZVM_MODE_NORMAL false
+    CURSOR=0
+    zvm_select_vi_mode $ZVM_MODE_VISUAL false
+    CURSOR=$#BUFFER
+    zle redisplay
+  }
+
+  # delimiter positions (bpos epos) of the pair around the cursor
+  # NOTE: `local a=$x b=$a` in ONE statement leaves b empty (all words
+  # expand before any assignment), so locals are declared separately.
+  function vm_find_pair() {
+    local char=$1
+    local o=$char c=$char
+    case $char in
+      '('|')') o='(' c=')';; '['|']') o='[' c=']';; '{'|'}') o='{' c='}';;
+    esac
+    local -i cur=$CURSOR bpos=-1 epos=-1 i
+    if [[ ${BUFFER:$cur:1} == "$char" ]]; then
+      # cursor sits on a delimiter: it is the opening one when a matching
+      # delimiter follows, otherwise the closing one
+      for ((i = cur + 1; i < $#BUFFER; i++)); do
+        [[ ${BUFFER:$i:1} == "$c" ]] && { bpos=$cur; epos=$i; break; }
+      done
+      if (( epos < 0 )); then
+        for ((i = cur - 1; i >= 0; i--)); do
+          [[ ${BUFFER:$i:1} == "$o" ]] && { bpos=$i; epos=$cur; break; }
+        done
+      fi
+    else
+      # cursor strictly inside: opening scans backward, closing forward
+      for ((i = cur - 1; i >= 0; i--)); do
+        [[ ${BUFFER:$i:1} == "$o" ]] && { bpos=$i; break; }
+      done
+      for ((i = cur + 1; i < $#BUFFER; i++)); do
+        [[ ${BUFFER:$i:1} == "$c" ]] && { epos=$i; break; }
+      done
+    fi
+    (( bpos >= 0 && epos > bpos )) || return 1
+    REPLY="$bpos $epos"
+  }
+
+  # read one key while showing operator-pending mode
+  function vm_read_char() {
+    local cc=
+    zvm_enter_oppend_mode
+    read -k 1 cc
+    zvm_exit_oppend_mode
+    REPLY=$cc
+  }
+
+  # y operator prefix (nvim y): yd -> delete surround, yc -> change
+  # surround, k -> text-object prefix (translated to i and pushed to the
+  # native yank operator as a complete chord, so counts work: y2kw/2ykw ==
+  # stock 2yiw), other keys are forwarded to the native yank.
+  function vm_yank_prefix() {
+    local pre=${NUMERIC:-}
+    unset NUMERIC 2>/dev/null  # prevent double-applying the count inside
+                               # the native operator's inner zle calls
+    local digits=
+    vm_read_char
+    local k=$REPLY p
+    local -i bpos epos
+    while [[ $k =~ ^[1-9]$ ]]; do
+      digits+=$k
+      vm_read_char
+      k=$REPLY
+      ZVM_KEYS=
+      [[ -z $k || $k == $'\e' ]] && return 0
+    done
+    local count=
+    if [[ -n $pre && -n $digits ]]; then
+      count=$(( pre * digits ))
+    else
+      count="${pre}${digits}"
+    fi
+    case $k in
+      d)
+        vm_read_char; p=$REPLY
+        [[ -z $p || $p == $'\e' ]] && { ZVM_KEYS=; return 0 }
+        # guard: on failure REPLY holds the delimiter char itself, and
+        # assigning that to the integer locals below raises a math error
+        # whose recovery wipes the buffer (pre-existing destructive bug)
+        vm_find_pair "$p" || { ZVM_KEYS=; return 0 }
+        bpos=${REPLY%% *} epos=${REPLY##* }
+        (( bpos >= 0 && epos > bpos )) || { ZVM_KEYS=; return 0 }
+        # nvim-surround ds semantics: drop ONLY the delimiters, keep the
+        # content between them (the old line deleted bpos..epos inclusive,
+        # wiping the content too)
+        BUFFER="${BUFFER:0:$bpos}${BUFFER:$((bpos+1)):$((epos-bpos-1))}${BUFFER:$((epos+1))}"
+        CURSOR=$bpos
+        ;;
+      c)
+        vm_read_char; p=$REPLY
+        [[ -z $p || $p == $'\e' ]] && { ZVM_KEYS=; return 0 }
+        vm_find_pair "$p" || { ZVM_KEYS=; return 0 }
+        bpos=${REPLY%% *} epos=${REPLY##* }
+        (( bpos >= 0 && epos > bpos )) || { ZVM_KEYS=; return 0 }
+        vm_read_char
+        # declare separately: `local n=$REPLY b=$n e=$n` in ONE statement
+        # leaves b and e empty (all words expand before any assignment --
+        # the exact trap the header comment warns about); the empty b
+        # silently deleted the opening delimiter on every yc
+        local n=$REPLY
+        local b=$n e=$n
+        case $n in
+          '(') e=')';; '[') e=']';; '{') e='}';;
+          ')') b='(';; ']') b='[';; '}') b='{';;
+        esac
+        BUFFER="${BUFFER:0:$bpos}${b}${BUFFER:$((bpos+1)):$((epos-bpos-1))}${e}${BUFFER:$((epos+1))}"
+        CURSOR=$((bpos + 1))
+        ;;
+      k)
+        # ykw == yiw: the plugin's range handler hardcodes the i/a
+        # text-object prefixes, the global k->i remap is invisible there.
+        # Push the complete counted chord to the native yank operator.
+        vm_read_char; p=$REPLY
+        ZVM_KEYS=
+        [[ -z $p || $p == $'\e' ]] && return 0
+        zle -U "${count}i$p"
+        zle vi-yank
+        return 0
+        ;;
+      *)
+        ZVM_KEYS=
+        zle -U "${count}$k"
+        zle vi-yank
+        ;;
+    esac
+    ZVM_KEYS=
+  }
+
+  # visual gs<char> -> add a pair around the selection (nvim-surround)
+  function vm_surround_add() {
+    vm_read_char
+    local c=$REPLY
+    [[ -z $c || $c == $'\e' ]] && { ZVM_KEYS=; return 0 }
+    zvm_change_surround S "$c"
+    ZVM_KEYS=
+  }
+
+  # c/d operator prefix translation. The plugin's range handler hardcodes
+  # the i/a text-object prefixes (iw/aw/iW/aW) and never consults the
+  # keymaps, so the global k->i remap is invisible after c/d. Read one key:
+  # k becomes i (the object char is read too, so c2kw -> c2iw works even
+  # though the stock plugin mishandles counted text objects); digits are
+  # absorbed and re-attached; anything else is forwarded untouched (cw,
+  # ca(, cc, c2w, ESC-cancel all behave exactly as before). A count typed
+  # BEFORE the operator (2cw, via zle's digit-argument/$NUMERIC) is folded
+  # in as well; leading and trailing counts multiply, like vim.
+  function vm_op_translate() {
+    local pre=${NUMERIC:-}
+    unset NUMERIC 2>/dev/null  # prevent double-applying the count inside
+                               # the plugin's inner zle calls
+    local digits=
+    vm_read_char
+    local k=$REPLY
+    ZVM_KEYS=
+    [[ -z $k || $k == $'\e' ]] && return 0
+    while [[ $k =~ ^[1-9]$ ]]; do
+      digits+=$k
+      vm_read_char
+      k=$REPLY
+      ZVM_KEYS=
+      [[ -z $k || $k == $'\e' ]] && return 0
+    done
+    local count=
+    if [[ -n $pre && -n $digits ]]; then
+      count=$(( pre * digits ))
+    else
+      count="${pre}${digits}"
+    fi
+    if [[ $k == k ]]; then
+      vm_read_char
+      local obj=$REPLY
+      ZVM_KEYS=
+      [[ -z $obj || $obj == $'\e' ]] && return 0
+      zvm_default_handler "${count}i${obj}"
+    else
+      zvm_default_handler "${count}${k}"
+    fi
+  }
+
+  # number increment/decrement (C-=/C--) and YY-clipboard removed per
+  # user decision: their CSI u bindings were deleted from vicmd
+
+  for w in vm_up_line vm_down_line vm_up_line_9 vm_down_line_9 vm_word_end_5 vm_word_back_5 \
+           vm_select_all vm_find_pair vm_read_char vm_yank_prefix vm_surround_add \
+           vm_op_translate; do
+    zvm_define_widget $w
+  done
+
+
+  # Remove dead surround ESC bindings (cause prefix delay on c/d/y operators)
+  for p in ca ci cs da di ds ya yi; do
+    bindkey -rM vicmd "${p}\\e" 2>/dev/null
+  done
+  bindkey -rM visual "S\\e" 2>/dev/null
+  bindkey -rM visual "ys\\e" 2>/dev/null
+  bindkey -rM visual "a\\e" 2>/dev/null
+  bindkey -rM visual "i\\e" 2>/dev/null
+
+  # visual i+text-object shadowed to undefined (nvim uses kw/kW/ka):
+  # `i` stays the instant right movement instead of hanging as a prefix
+  bindkey -M visual 'iw' undefined-key
+  bindkey -M visual 'iW' undefined-key
+  bindkey -M visual 'ia' undefined-key
+
+  # surround bindings: visual gs<char> add, normal y d <char> delete,
+  # normal y c <char> <new> change (see vm_yank_prefix above)
+  zvm_bindkey visual 'gs' vm_surround_add
+  zvm_bindkey visual 'kw' select-in-word
+  zvm_bindkey visual 'kW' select-in-blank-word
+  zvm_bindkey visual 'ka' select-in-shell-word
+  # 'k' is deliberately UNBOUND in visual mode: the native default (up-line)
+  # would fire after KEYTIMEOUT (10ms) and break the kw/kW/ka chords at human
+  # typing speed. An unbound prefix makes zle wait indefinitely (nvim x-mode
+  # k->i parity). Unbind, do not rebind -- any binding reintroduces the race.
+  bindkey -rM visual 'k'
+
+  # motions: normal & visual (nvim n/x)
+  for km in vicmd visual; do
+    zvm_bindkey $km 'n' vi-backward-char         # n -> h
+    zvm_bindkey $km 'N' vi-first-non-blank       # N -> ^
+    zvm_bindkey $km 'i' vi-forward-char          # i -> l
+    zvm_bindkey $km 'I' vi-end-of-line           # I -> $
+    zvm_bindkey $km 'u' vm_up_line               # u -> k
+    zvm_bindkey $km 'e' vm_down_line             # e -> j
+    zvm_bindkey $km 'h' vi-forward-word-end      # h -> e
+    zvm_bindkey $km 'U' vm_up_line_9             # U -> 9k
+    zvm_bindkey $km 'E' vm_down_line_9           # E -> 9j
+    zvm_bindkey $km 'H' vm_word_end_5            # H -> 5e
+    zvm_bindkey $km 'B' vm_word_back_5           # B -> 5b
+    zvm_bindkey $km 'l' undo                     # l -> u
+    zvm_bindkey $km 'L' redo                     # L -> <C-r>
+  done
+
+  # history search on / and ? is disabled (use C-h / C-b instead)
+  bindkey -M vicmd '/' undefined-key
+  bindkey -M vicmd '?' undefined-key
+
+  # inserting text
+  zvm_bindkey vicmd 'k'  zvm_enter_insert_mode   # k  -> i
+  zvm_bindkey vicmd 'K'  zvm_insert_bol          # K  -> I
+  zvm_bindkey vicmd '^N' zvm_insert_bol          # C-n -> I
+  zvm_bindkey viins '^N' zvm_insert_bol          # C-n -> <ESC>I
+
+  # c/d pass through vm_op_translate so the k->i text-object prefix
+  # works in operator context (ckw == ciw); y handles it in vm_yank_prefix
+  zvm_bindkey vicmd 'c' vm_op_translate
+  zvm_bindkey vicmd 'd' vm_op_translate
+
+  # y operator: yd/yc surround ops (nvim-surround), else vanilla yank
+  zvm_bindkey vicmd 'y' vm_yank_prefix
+
+  # C-i (CSI u encoding; TAB stays a literal tab). In insert mode plain
+  # end-of-line is used: zvm_append_eol re-enters insert through normal
+  # mode and lands one character short of the end.
+  zvm_bindkey vicmd '^[[105;5u' zvm_append_eol  # C-i -> A
+  zvm_bindkey viins '^[[105;5u' end-of-line      # C-i -> <ESC>A
+
+  # selection / line editing
+  zvm_bindkey vicmd '^A' vm_select_all           # C-a -> ggVG$
+  zvm_bindkey viins '^A' vm_select_all
+
+  # kill the plugin's "vv opens editor" duplicate prefix: v stays a
+  # pure visual key; the editor is on ^V in every mode
+  zvm_bindkey visual 'v' zvm_enter_visual_mode
+  zvm_bindkey visual '^v' zvm_vi_edit_command_line
+
+  # redraw / editor
+  zvm_bindkey vicmd '^L' clear-screen
+  zvm_bindkey viins '^L' clear-screen
+  zvm_bindkey vicmd '^v' zvm_vi_edit_command_line
+  zvm_bindkey viins '^v' zvm_vi_edit_command_line
+
+  zvm_bindkey viins '^E' menu-select
+  zvm_bindkey viins '^U' menu-select
+
+  # no completion on TAB (nvim parity): insert a literal tab instead
+  zvm_bindkey viins '^I' self-insert-unmeta
+  bindkey -M vicmd '^I' undefined-key
+
+  # insert-mode plugin/vanilla defaults: explicitly disabled per keymap
+  # audit (only typing / Enter / backspace / ESC / custom keys remain)
+  bindkey -M main '^D' undefined-key
+  bindkey -M main '^F' undefined-key
+  bindkey -M main '^G' undefined-key
+  bindkey -M main '^K' undefined-key
+  bindkey -M main '^P' undefined-key
+  bindkey -M main '^Q' undefined-key
+  bindkey -M main '^R' undefined-key
+  bindkey -M main '^S' undefined-key
+  bindkey -M main '^T' undefined-key
+  bindkey -M main '^O' undefined-key
+  bindkey -M main '^Z' undefined-key
+  bindkey -M main '^Y' undefined-key
+  bindkey -M main '^_' undefined-key
+  bindkey -M main '^[[Z' undefined-key
+  bindkey -M main '^[[H' undefined-key
+  bindkey -M main '^[[F' undefined-key
+  # zsh-autocomplete leftovers: Alt+Up/Down and ESC-prefixed arrow variants
+  # arrive as one burst, so nopping them adds no ESC delay
+  bindkey -M main '^[[1;3A' undefined-key
+  bindkey -M main '^[[1;3B' undefined-key
+  bindkey -M main '^[^[OA' undefined-key
+  bindkey -M main '^[^[OB' undefined-key
+  bindkey -M main '^[^[[A' undefined-key
+  bindkey -M main '^[^[[B' undefined-key
+  # Delete key: forward-delete in insert mode. Arrives as one burst, so it
+  # matches instantly and cannot delay the lone-ESC exit.
+  zvm_bindkey main '^[[3~' delete-char
+  bindkey -M main '^Xh' undefined-key
+
+  # ^C: remove the self-insert binding; the tty line discipline (ISIG) turns
+  # ^C into SIGINT before zle ever sees the byte -- the binding was dead code
+  bindkey -rM main '^C'
+  bindkey -rM viins '^C'
+
+  # yank selection to the internal kill ring (paste with p/P);
+  # Y copies to the SYSTEM clipboard (OSC 52), like nvim x Y;
+  # lowercase y is the internal register only
+  zvm_bindkey visual 'y' vi-yank
+  zvm_bindkey visual 'Y' zvm_vi_yank
+  bindkey -M visual 'gp' undefined-key
+  bindkey -M visual 'gP' undefined-key
+
+  # history-substring-search: C-h up / C-b down, in every mode
+  zvm_bindkey vicmd  '^H' history-substring-search-up
+  zvm_bindkey vicmd  '^B' history-substring-search-down
+  zvm_bindkey visual '^H' history-substring-search-up
+  zvm_bindkey visual '^B' history-substring-search-down
+  bindkey -M viins '^H' history-substring-search-up
+  bindkey -M viins '^B' history-substring-search-down
+
+  # explicitly disable the unused classic surround family (cs/ds/ys/…)
+  # and the visual add-on-S / add-on-ys variants (gs is the add key)
+  for s in $sur; do
+    for km in cs ds ys ca ci da di ya yi; do
+      bindkey -M vicmd "$km$s" undefined-key
+    done
+    bindkey -M visual "S$s" undefined-key
+    bindkey -M visual "ys$s" undefined-key
+    bindkey -M visual "a$s" undefined-key
+    bindkey -M visual "i$s" undefined-key
+  done
+
+  # arrow keys: disabled (nvim <nop>)
+  for km in vicmd visual viopp viins; do
+    for k in '^[[A' '^[[B' '^[[C' '^[[D' '^[OA' '^[OB' '^[OC' '^[OD'; do
+      bindkey -M $km $k undefined-key
+    done
+  done
+
+  # no indentation concept on a shell command line
+  bindkey -M vicmd '<' undefined-key
+  bindkey -M vicmd '>' undefined-key
+
+  # Y/YY and normal-mode C-i/C-=/C-- deleted per user decision:
+  # no vicmd ESC-prefix bindings -> ESC is instant in normal mode.
+  bindkey -M vicmd 'Y' undefined-key
+  bindkey -M vicmd '"' undefined-key
+
+  # selection / line editing
+  bindkey -M vicmd '^P' undefined-key
+  bindkey -M vicmd '^G' undefined-key
+  bindkey -M vicmd '=' undefined-key
+  bindkey -M vicmd '^D' undefined-key
+  bindkey -M vicmd '^R' undefined-key
+  bindkey -M vicmd '^J' undefined-key
+  bindkey -M vicmd '+' undefined-key
+  bindkey -M vicmd ' ' undefined-key
+  bindkey -M vicmd 'ga' undefined-key
+  bindkey -M vicmd 'gU' undefined-key
+  bindkey -M vicmd 'gu' undefined-key
+  bindkey -M vicmd 'g~' undefined-key
+  bindkey -M vicmd 'gx' undefined-key
+  bindkey -M vicmd '^X' undefined-key
+  bindkey -M vicmd '|' undefined-key
+  bindkey -M vicmd 'gp' undefined-key
+  bindkey -M vicmd 'gP' undefined-key
+  # '-' needs the -- separator (bindkey would parse it as an option)
+  bindkey -M vicmd -- - undefined-key
+
+  # final audit: remove remaining unused defaults
+  bindkey -M vicmd '^[[F' undefined-key
+  bindkey -M vicmd '^[[H' undefined-key
+  bindkey -M visual 'o' undefined-key
+  bindkey -M main '^W' undefined-key
+  bindkey -M viins '^J' undefined-key
+
+  # removed per audit (single-line buffer / nvim parity): find-char family,
+  # g-motions & history jumps, line extremes, change/replace variants,
+  # back-delete, repeat, visual-line alias, marks, comment command
+  bindkey -M vicmd 'ge' undefined-key
+  bindkey -M vicmd 'gE' undefined-key
+  bindkey -M vicmd 'gg' undefined-key
+  bindkey -M vicmd 'G'  undefined-key
+  bindkey -M vicmd '$'  undefined-key
+  bindkey -M vicmd '^'  undefined-key
+  # '0' restored: beginning-of-line, and the second digit of counts (10w).
+  # vi-digit-or-beginning-of-line does both (0 is a count only after 1-9).
+  bindkey -M vicmd '0'  vi-digit-or-beginning-of-line
+  bindkey -M vicmd 'f'  undefined-key
+  bindkey -M vicmd 'F'  undefined-key
+  bindkey -M vicmd 't'  undefined-key
+  bindkey -M vicmd 'T'  undefined-key
+  bindkey -M vicmd ','  undefined-key
+  bindkey -M vicmd ';'  undefined-key
+  bindkey -M vicmd 'C'  undefined-key
+  bindkey -M vicmd 'S'  undefined-key
+  bindkey -M vicmd 'R'  undefined-key
+  bindkey -M vicmd 's'  undefined-key
+  bindkey -M vicmd 'X'  undefined-key
+  bindkey -M vicmd '.'  undefined-key
+  bindkey -M vicmd 'V'  undefined-key
+  bindkey -M vicmd 'm'  undefined-key
+  bindkey -M vicmd "'" undefined-key   # mark jumps dead: m no longer sets marks
+  bindkey -M vicmd '`' undefined-key
+  bindkey -M vicmd '#'  undefined-key
+  # counts restored (3w, 5b, 10w, ...). c/d/y counts (c2w) never come
+  # through here -- the plugin reads those keys itself.
+  for d in {1..9}; do bindkey -M vicmd "$d" digit-argument; done
+
+  # remaining dead keys: ':' (execute-named-cmd) and Delete in normal mode
+  bindkey -M vicmd ':' undefined-key
+  bindkey -M vicmd '^[[3~' undefined-key
+}
+
+# ─── menuselect ──────────────────────────────────────────────────────────
 bindkey -rpM menuselect ""
 bindkey -M menuselect "^E" menu-complete
 bindkey -M menuselect "^U" reverse-menu-complete
-bindkey -M menuselect "^[[D" .backward-char "^[OD" .backward-char
-bindkey -M menuselect "^[[C" .forward-char "^[OC" .forward-char
 bindkey -M menuselect "^K" send-break
-
-# vicmd
-bindkey -rpM vicmd ""
-bindkey -M vicmd "^M" accept-line
-bindkey -M vicmd "u" up-line
-bindkey -M vicmd "e" down-line
-bindkey -M vicmd "^H" history-substring-search-up
-bindkey -M vicmd "^B" history-substring-search-down
-bindkey -M vicmd "n" vi-backward-char
-bindkey -M vicmd "N" vi-first-non-blank
-bindkey -M vicmd "^N" vi-insert-bol
-bindkey -M vicmd "i" vi-forward-char
-bindkey -M vicmd "I" vi-end-of-line
-bindkey -M vicmd "^[[105;5u" vi-add-eol # Ctrl+i in CSI u, configured in ghostty
-bindkey -M vicmd "^v" edit-command-line
-
-bindkey -M vicmd "b" vi-backward-word
-bindkey -M vicmd "B" vi-backward-blank-word
-bindkey -M vicmd "h" vi-forward-word-end
-bindkey -M vicmd "H" vi-forward-blank-word-end
-bindkey -M vicmd "a" vi-add-next
-bindkey -M vicmd "A" vi-add-eol
-bindkey -M vicmd "k" vi-insert
-bindkey -M vicmd "K" vi-insert-bol
-bindkey -M vicmd "o" vi-open-line-below
-bindkey -M vicmd "O" vi-open-line-above
-
-bindkey -M vicmd "d" vi-delete
-bindkey -M vicmd "D" vi-kill-eol
-bindkey -M vicmd "c" vi-change
-bindkey -M vicmd "C" vi-change-eol
-bindkey -M vicmd "x" vi-delete-char
-bindkey -M vicmd "X" vi-backward-delete-char
-bindkey -M vicmd "r" vi-replace-chars
-bindkey -M vicmd "R" vi-replace
-
-bindkey -M vicmd "p" vi-put-after
-bindkey -M vicmd "P" vi-put-before
-
-bindkey -M vicmd "v" visual-mode
-bindkey -M vicmd "V" visual-line-mode
-bindkey -M vicmd "l" undo
-bindkey -M vicmd "L" redo
-
-bindkey -M vicmd "." vi-repeat-change
-bindkey -M vicmd "0"-"9" digit-argument
-bindkey -M vicmd "J" vi-join
-
-# viins
-bindkey -M viins "^N" vi-insert-bol
-# Let Backspace cross the position where insert mode started (viinsbegin).
-# Otherwise e.g. ESC -> A or C-i (vi-add-eol) leaves Backspace unable to
-# delete anything, because insert "began" at the end of the line.
-bindkey -M viins "^?" backward-delete-char
-bindkey -M viins "^[[105;5u" vi-add-eol # Ctrl+i in CSI u, configured in ghostty
-bindkey -M viins "^v" edit-command-line
-bindkey -M viins "^H" history-substring-search-up
-bindkey -M viins "^B" history-substring-search-down
-bindkey -M viins "^[[A" history-substring-search-up "^[OA" history-substring-search-up
-bindkey -M viins "^[[B" history-substring-search-down "^[OB" history-substring-search-down
-bindkey -M viins "^[[1;3A" undefined-key
-bindkey -M viins "^[[1;3B" undefined-key
-
-# viopp
-bindkey -rpM viopp ""
-bindkey -M viopp "^[" vi-cmd-mode
-bindkey -M viopp "u" up-line
-bindkey -M viopp "e" down-line
-bindkey -M viopp "aw" select-a-word
-bindkey -M viopp "aW" select-a-blank-word
-bindkey -M viopp "kw" select-in-word
-bindkey -M viopp "kW" select-in-blank-word
-
-# visual
-bindkey -rpM visual ""
-bindkey -M visual "^[" deactivate-region
-bindkey -M visual "u" up-line
-bindkey -M visual "e" down-line
-bindkey -M visual "^H" history-substring-search-up
-bindkey -M visual "^B" history-substring-search-down
-bindkey -M visual "aw" select-a-word
-bindkey -M visual "aW" select-a-blank-word
-bindkey -M visual "kw" select-in-word
-bindkey -M visual "kW" select-in-blank-word
-bindkey -M visual "x" vi-delete
-bindkey -M visual "p" put-replace-selection
-bindkey -M visual "d" vi-delete
-bindkey -M visual "c" vi-change
-
-# Deactivate the selection when leaving the visual keymap, e.g. when
-# entering insert mode straight from visual via A/C-i. Otherwise the
-# region stays active (and rendered) until the first character is typed.
-zle-keymap-select() {
-	[[ $KEYMAP != visual ]] && ((REGION_ACTIVE)) && zle .deactivate-region
-}
-zle -N zle-keymap-select

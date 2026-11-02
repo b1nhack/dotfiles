@@ -1,9 +1,6 @@
 export ZDOTDIR="$HOME/.config/zsh"
 
-# for fast ESC response in zsh
-export KEYTIMEOUT=1
-
-# for fast ESC response in neomutt
+# for fast ESC response in neomutt (ncurses)
 export ESCDELAY=0
 
 export PATH="$PATH:$HOME/.local/share/cargo/bin"
