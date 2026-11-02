@@ -36,15 +36,16 @@ source $ZDOTDIR/plugins/fsh/fast-syntax-highlighting.plugin.zsh
 # binding list), so it cannot live in zvm_config -- it must be set here.
 ZVM_LAZY_KEYBINDINGS=false
 function zvm_config() {
-  ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
-  ZVM_KEYTIMEOUT=0.3             # plugin key-reader wait: operator chords
-                                 # (d/c/y + motion/text object). The
-                                 # KEYTIMEOUT=30 it derives during zvm_init
-                                 # is overridden by zvm_after_init in
-                                 # .bindkeyrc (KEYTIMEOUT=1) on purpose.
-  ZVM_VI_ESCAPE_BINDKEY='<ESC>'
-  ZVM_SYSTEM_CLIPBOARD_ENABLED=true
-  ZVM_CLIPBOARD_USE_OSC52=true   # Y -> system clipboard (nvim "+y)
+	ZVM_READKEY_ENGINE=$ZVM_READKEY_ENGINE_ZLE
+	# plugin key-reader wait: operator chords
+	# (d/c/y + motion/text object). The
+	# KEYTIMEOUT=30 it derives during zvm_init
+	# is overridden by zvm_after_init in
+	# .bindkeyrc (KEYTIMEOUT=1) on purpose.
+	ZVM_KEYTIMEOUT=0.3
+	ZVM_VI_ESCAPE_BINDKEY='<ESC>'
+	ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+	ZVM_CLIPBOARD_USE_OSC52=true # Y -> system clipboard (nvim "+y)
 }
 source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
