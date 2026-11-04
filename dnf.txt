@@ -19,6 +19,8 @@ librime-octagram
 libwebp-tools
 lld
 llvm
+mesa-va-drivers-freeworld
+mesa-vulkan-drivers-freeworld
 mihomo-party
 msmtp
 musl-gcc
