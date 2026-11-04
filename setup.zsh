@@ -22,8 +22,21 @@ ln -sf ~/.config/pwndbg/.gdbinit ~/.gdbinit
 dconf load / <~/.config/dconf.ini
 
 # enable multimedia
+# https://rpmfusion.org/Configuration
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
+
+# Gnome Software/KDE Discover
+sudo dnf install rpmfusion-\*-appstream-data
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing
-sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo dnf install @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+
+# Intel GPU
+sudo dnf install intel-media-driver
+
+# AMD GPU
 sudo dnf install mesa-va-drivers-freeworld
+sudo dnf swap mesa-vulkan-drivers{,-freeworld}
+
+# NVIDIA GPU
+sudo dnf install libva-nvidia-driver
