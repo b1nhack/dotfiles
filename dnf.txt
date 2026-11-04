@@ -29,7 +29,9 @@ oxipng
 perl
 qemu
 rizin
+rpmfusion-free-appstream-data
 rpmfusion-free-release
+rpmfusion-nonfree-appstream-data
 rpmfusion-nonfree-release
 rustup
 seahorse
